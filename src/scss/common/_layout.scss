@@ -1,0 +1,43 @@
+.content {
+    > .inner {
+       
+        width:1180px;min-height:800px;
+        margin:50px auto 0;
+        position:relative;
+        opacity:0;
+        transform:translateY(80px);
+        transition:opacity .5s, transform 1s;
+        
+        h2 {
+            position:relative;
+            font:300 80px/1 'Quicksand';color:#111;margin-bottom:10px;
+        }
+        .desc_sub {
+            position:relative;
+            margin:15px 0 0 10px;
+            padding:0 0 50px 20px;
+            font-weight:300;font-size:20px;line-height:30px;
+        
+            &::after {
+                content:"";
+                position:absolute;left:-14px;top:0;
+                width:30px;height:30px;
+                background:url(../../../public/img/ico_gnb.svg) no-repeat 0 0;background-size:30px auto;
+            }
+            
+        }
+    }
+    &.on {
+        figure {
+            opacity:1;
+        }
+        >.inner {
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    .info {
+        border-top:1px solid #000;
+    }
+}
