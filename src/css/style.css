@@ -194,4 +194,34 @@ header .inner .lines .lines_line.line3 {
   border-top: 1px solid #000;
 }
 
+.Department .bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500px;
+  height: 600px;
+}
+.Department .bg .bg1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 250px;
+  background: url(../../../public/img/img1.png) no-repeat 0 0;
+  background-size: 200px auto;
+  transform: rotate(-10deg);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.Department .bg .bg2 {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  width: 250px;
+  height: 300px;
+  background: url(../../../public/img/img2.png) no-repeat 0 0;
+  background-size: 250px auto;
+  transform: rotate(20deg);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 /*# sourceMappingURL=style.css.map */
