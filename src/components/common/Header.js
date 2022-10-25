@@ -18,20 +18,22 @@ export default function Header(props) {
                         <img src={url} alt="logo" />
                     </Link>
                 </h1>
-                <ul id="gnb">
-                    <li>
-                        <NavLink to='/' activeClassName="on">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/department' activeClassName="on">Department</NavLink>  
-                    </li>
-                    <li>
-                        <NavLink to='/community' activeClassName="on">Community</NavLink>
-                    </li>
-                    <li><NavLink to='/gallery' activeClassName="on">Gallery</NavLink></li>
-                    <li><NavLink to='/youtube' activeClassName="on">Youtube</NavLink></li>
-                    <li><NavLink to='/location' activeClassName="on">Location</NavLink></li>       
-                </ul>
+                <nav>
+                    <ul id="gnb">
+                        <li>
+                            <NavLink to='/' activeClassName="on">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/department' activeClassName="on">Department</NavLink>  
+                        </li>
+                        <li>
+                            <NavLink to='/community' activeClassName="on">Community</NavLink>
+                        </li>
+                        <li><NavLink to='/gallery' activeClassName="on">Gallery</NavLink></li>
+                        <li><NavLink to='/youtube' activeClassName="on">Youtube</NavLink></li>
+                        <li><NavLink to='/location' activeClassName="on">Location</NavLink></li>       
+                    </ul>
+                </nav>
                 <div className="until">
                     <NavLink to='/Member' activeClassName="on">Member</NavLink>
                     <NavLink to='/location' activeClassName="on" className="connect">CONNECT<br/>WITH US</NavLink>
