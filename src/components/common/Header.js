@@ -1,28 +1,18 @@
 import React from "react";
-import { NavLink, Link  } from "react-router-dom";
+import { NavLink, Link} from "react-router-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 // import { faBars } from '@fortawesome/free-solid-svg-icons' 
 
-export default function Header(props) {
-
-    let url = ' ';
-    props.type === 'main'
-        ? (url = process.env.PUBLIC_URL + '/img/logo_main.png')
-        : (url = process.env.PUBLIC_URL + '/img/logo_main.png');
+export default function Header() {
 
     return(
-        <header className={props.type}>
+        <header>
             <div className="inner">
                 <h1>
-                    <Link to='/'>
-                        <img src={url} alt="logo" />
-                    </Link>
+                    <Link to='/' activeClassName="on"><img src={process.env.PUBLIC_URL + '/img/logo_main.png'} alt="a yoga" /></Link>   
                 </h1>
                 <nav>
                     <ul id="gnb">
-                        <li>
-                            <NavLink to='/' activeClassName="on">Home</NavLink>
-                        </li>
                         <li>
                             <NavLink to='/department' activeClassName="on">Department</NavLink>  
                         </li>

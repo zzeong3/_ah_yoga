@@ -35,6 +35,10 @@ fieldset {
 
 header {
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 header .inner {
   position: relative;
@@ -150,10 +154,202 @@ header .inner .lines .lines_line.line3 {
   width: 270px;
 }
 
+footer {
+  padding: 100px 0 80px;
+}
+footer .inner {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 70px 50px 60px;
+}
+footer .inner .footer_cont {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .inner .area_footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .inner .area_footer .footer_logo {
+  display: block;
+  overflow: hidden;
+  font-size: 30px;
+  font-weight: 600;
+  color: #101010;
+}
+footer .inner .area_footer:nth-of-type(2) {
+  padding: 7px 0 0 80px;
+}
+footer .inner .area_footer .link_copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 65px;
+}
+footer .inner .area_footer .link_copyright .thumb_logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+footer .inner .area_footer .link_copyright .thumb_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .inner .area_footer .link_copyright .txt {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+footer .inner .area_footer .footer_gnb {
+  column-count: 2;
+  column-gap: 100px;
+  margin-left: -18px;
+}
+footer .inner .area_footer .footer_gnb li {
+  margin-bottom: 20px;
+}
+footer .inner .area_footer .footer_gnb li a {
+  display: block;
+  padding-left: 18px;
+  font-weight: 500;
+  color: #101010;
+  background: url(../../../public/img/ico_gnb.svg);
+  background-repeat: no-repeat;
+  background-position: 6px 50%;
+  background-size: 0;
+  transition-duration: 0.1s;
+}
+footer .inner .area_footer .footer_gnb li a:hover, footer .inner .area_footer .footer_gnb li a.on {
+  background-position: 0 50%;
+  background-size: 12px;
+}
+footer .inner .area_footer .area_link {
+  padding-top: 20px;
+}
+footer .inner .area_footer .area_link .footer_link {
+  display: block;
+  margin-top: 15px;
+  color: rgba(16, 16, 16, 0.8);
+  text-decoration: underline;
+}
+footer .inner .area_footer .tit_footer_sns {
+  display: block;
+  font-size: 22px;
+}
+footer .inner .area_footer .list_sns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+footer .inner .area_footer .list_sns li {
+  width: 38px;
+  height: 38px;
+  margin-right: 16px;
+}
+footer .inner .area_footer .list_sns li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(16, 16, 16, 0.2);
+}
+footer .inner .area_footer .list_sns li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(80%);
+}
+footer .inner .area_footer .area_stroe {
+  position: absolute;
+  left: auto;
+  bottom: 0;
+}
+footer .inner .area_footer .area_stroe strong {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+}
+footer .inner .area_footer .area_stroe a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #101010;
+}
+footer .inner .lines_center {
+  position: absolute;
+  left: 27%;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../public/img/ico_gnb.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer .inner .lines_center .line_center {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 1px;
+  height: 1px;
+  background-color: #101010;
+}
+footer .inner .lines_center .line_center.line1 {
+  width: 339px;
+}
+footer .inner .lines_center .line_center.line2 {
+  left: 20px;
+  right: auto;
+  width: 841px;
+}
+footer .inner .lines_center .line_center.line3 {
+  left: 20px;
+  top: 20px;
+  right: auto;
+  bottom: auto;
+  height: 350px;
+}
+footer .inner .line_etc {
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  background-color: #101010;
+}
+footer .inner .line_etc.line1 {
+  top: 20px;
+  height: 100%;
+}
+footer .inner .line_etc.line2 {
+  top: auto;
+  bottom: 0;
+  width: 100%;
+}
+footer .inner .line_etc.line3 {
+  left: auto;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
 .content > .inner {
   width: 1180px;
-  min-height: 800px;
-  margin: 50px auto 0;
+  margin: 225px auto 0;
   position: relative;
   opacity: 0;
   transform: translateY(80px);
@@ -194,6 +390,105 @@ header .inner .lines .lines_line.line3 {
   border-top: 1px solid #000;
 }
 
+#news {
+  width: 1180px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #c6ffc6;
+  position: relative;
+}
+
+#pics {
+  width: 100%;
+  height: 100vh;
+  background: #c6fcff;
+  position: relative;
+  padding: 10vw;
+  overflow: hidden;
+}
+#pics p {
+  font: bold 200px/1 "arial";
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+#pics h3 {
+  font: bold 160px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+#vids {
+  width: 100%;
+  height: 100vh;
+  background: #eeffc6;
+  position: relative;
+  padding: 10vw;
+}
+#vids .swiper {
+  height: 100%;
+}
+#vids .swiper .swiper-slide {
+  width: 100%;
+}
+#vids .swiper .swiper-slide .inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 50px/1 "arial";
+  color: #666;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+}
+#vids .swiper .swiper-slide.swiper-slide-active .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#visual {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 172px;
+  z-index: 1;
+  overflow: hidden;
+}
+#visual .inner {
+  background: lightgray;
+  height: 100vh;
+}
+
+.scroll_navi {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  z-index: 5;
+}
+.scroll_navi li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #101010;
+  border-radius: 10px;
+  background: #fff;
+  margin: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.scroll_navi li.on {
+  height: 50px;
+  background: #111;
+  border: #fff;
+}
+
 .Department .bg {
   position: absolute;
   right: 0;
@@ -227,7 +522,7 @@ header .inner .lines .lines_line.line3 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .Department .info .intro_department {
-  padding: 100px 0 150px;
+  padding: 140px 0 150px;
 }
 .Department .info .intro_department .thumb_intro {
   position: relative;
