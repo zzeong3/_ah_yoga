@@ -1,4 +1,10 @@
 import { Route, Switch } from 'react-router-dom';
+// 유투브 메인으로 불러야할 준비!
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setYoutube } from './redux/action';
+import axios from 'axios';
+
 
 import './scss/style.scss';
 
@@ -19,6 +25,23 @@ import Youtube from './components/sub/Youtube';
 
 
 function App() {
+
+const dispatch = useDispatch();
+
+  const getYoutube = async () => {
+		const key = 'AIzaSyAy6VlenkzBMN3Yy81EdqHO80h8HkvzNJw';
+		const playlist = "PL-LezOK-mmmMRxgwnfa7UMKA3FpI_yYik";
+		const num = 9;
+		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
+
+		const result = await axios.get(url);
+		dispatch(setYoutube(result.data.items));
+	}
+
+	useEffect(() => {
+		getYoutube();
+	}, []);
+
 	return (
 		<>
 			<Switch>

@@ -35,8 +35,8 @@ export default function Footer() {
                             <li><NavLink to='/member' activeClassName="on">Member</NavLink></li>   
                         </ul>
                         <div className="area_link">
-                            <a href="tel:+380962722100" class="footer_link">UA: +38 096 272 2100</a>
-                            <a href="mailto:mail@halo-lab.com" class="footer_link">mail@halo-lab.com</a>
+                            <a href="tel:+380962722100" className="footer_link">UA: +38 096 272 2100</a>
+                            <a href="mailto:mail@halo-lab.com" className="footer_link">mail@halo-lab.com</a>
                         </div>
                     </div>
                     <div className="area_footer">

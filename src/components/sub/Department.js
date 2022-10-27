@@ -82,15 +82,15 @@ export default function Department() {
                             </div> 
                         </li>       
                         <li>
-                            <div class="cont_img">
-                                <span class="thumb">
+                            <div className="cont_img">
+                                <span className="thumb">
                                 <img src={process.env.PUBLIC_URL + '/img/img7.png'} alt=""/>
                                 </span>
                             </div>
                         </li>
                         <li>
-                            <div class="cont_img">
-                                <span class="thumb">
+                            <div className="cont_img">
+                                <span className="thumb">
                                 <img src={process.env.PUBLIC_URL + '/img/img10.png'} alt=""/>
                                 </span>
                             </div>

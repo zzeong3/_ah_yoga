@@ -8,10 +8,13 @@
         height:100%;
         .swiper-slide {
             width:100%;
+            &.swiper-slide-active {
+                z-index:1;
+            }
             .inner {
                 width:100%;
                 height:100%;
-                background:#fff;
+                
                 display:flex;
                 justify-content:center;
                 align-items:center;
