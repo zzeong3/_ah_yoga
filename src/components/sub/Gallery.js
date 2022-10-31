@@ -1,66 +1,78 @@
 import { useEffect, useRef, useState } from 'react';
 import Layout from '../common/Layout';
 import Popup from '../common/Popup';
-import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 import Masonry from 'react-masonry-component';
 
 
 export default function Gallery(){
+    const dispatch = useDispatch(); 
+    const Items = useSelector(store => store.flickrReducer.flickr);
     const masonryOption = { transitionDuration: '.5s' };
-    const [Items, setItems] = useState([]);
+    const [Opt, setOpt] = useState({type: 'user' , user : '188875987@N03'}); 
     const [Loading, setLoading] = useState(true);
     const [EnableClick, setEnableClick] = useState(true);
-    const [Index, setIndex] = useState(0);
+    const [Index, setIndex] = useState(0); 
     const frame = useRef(null);
     const input = useRef(null);
     const pop = useRef(null);
 
 
-    const getFlickr = async (opt) => {
-        const key = 'b0df1caf2be4e4a4a3efd41e6897ef7b';
-        const method_interest = 'flickr.interestingness.getList';
-        const method_search = 'flickr.photos.search';
-        const method_user = 'flickr.people.getPhotos';
-        const num = 40;
-        let url = ' ';
-        
-        if( opt.type === 'interest') {
-            url = `https://www.flickr.com/services/rest/?method=${method_interest}&per_page=${num}&api_key=${key}&format=json&nojsoncallback=1`;
-        }
-        if( opt.type === 'search') {
-            url = `https://www.flickr.com/services/rest/?method=${method_search}&per_page=${num}&api_key=${key}&format=json&nojsoncallback=1&tags=${opt.tags}`
-        }
-        if( opt.type === 'user') {
-            url = `https://www.flickr.com/services/rest/?method=${method_user}&per_page=${num}&api_key=${key}&format=json&nojsoncallback=1&user_id=${opt.user}`;
-        }
-
-        const result = await axios.get(url);
-        if (result.data.photos.photo.length  === 0) return alert ('해당 검색어의 결과 이미지가 없습니다.') 
-        setItems(result.data.photos.photo);
-
-        setTimeout(() => {
-            setLoading(false);
-            frame.current.classList.add('on');
-            setTimeout(() => {
-                setEnableClick(true);
-            }, 500); 
-        }, 1000);
-       
-    };
-
-    useEffect (() => getFlickr({type : 'user', user: '188875987@N03'}), [])
     const showSearch = () => {
         const result = input.current.value.trim();
         input.current.value = '';
 
-        if(!result) return alert ('검색어를 입력하세요');
+        if (!result) return alert('검색어를 입력하세요');
 
+        if (!EnableClick) return;
+        setEnableClick(false);
+        setLoading(true);
+        frame.current.classList.remove('on');
+        setOpt({ type: 'search', tags: result, });
+    };
+
+    const showInterest = () => {
+        if(!EnableClick) return;
+
+        setEnableClick(false);
+
+        setLoading(true);
+        frame.current.classList.remove('on');
+        setOpt({type: 'interest'});
+    }
+
+    const showMine = () => {
+        if(!EnableClick) return;
+
+        setEnableClick(false);
+
+        setLoading(true);
+        frame.current.classList.remove('on');
+        setOpt({type : 'user', user: '188875987@N03'});
+    }
+
+    const showUser = (e) => {
         if(!EnableClick) return;
         setEnableClick(false);
         setLoading(true);
         frame.current.classList.remove('on');
-        getFlickr({type : 'search', tags : result,});
-    };
+        setOpt({type : 'user', user : e.target.innerText}); 
+    }
+
+    useEffect (showMine, [])
+
+    useEffect(()=>{
+        dispatch({type: 'types.FLICKR.start', Opt})
+    },[Opt])
+
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            frame.current.classList.add('on');
+            setLoading(false);
+            setEnableClick(true);
+        },500)
+    },[Items])
 
     return(
         <>
@@ -81,28 +93,8 @@ export default function Gallery(){
                 )}
                 <div className="controls">
                     <nav>
-                        <button onClick={() => {
-                            if(!EnableClick) return;
-                            // 모션중이면 false일테니  return으로 방지
-                            setEnableClick(false);
-                            // true로 들어와서 다시 false로 바꾸어 재이벤트 방지
-                            setLoading(true);
-                            frame.current.classList.remove('on');
-                            getFlickr({type: 'interest'});
-                        }}>
-                            Interest Gallery
-                        </button>
-                        <button onClick={() => {
-                            if(!EnableClick) return;
-                            // 모션중이면 false일테니  return으로 방지
-                            setEnableClick(false);
-                            // true로 들어와서 다시 false로 바꾸어 재이벤트 방지
-                            setLoading(true);
-                            frame.current.classList.remove('on');
-                            getFlickr({type : 'user', user: '188875987@N03'});
-                        }}>
-                            My Gallery
-                        </button>
+                        <button onClick={showInterest}>Interest Gallery</button>
+                        <button onClick={showMine}>My Gallery</button>
                     </nav>
                     <div className="searchBox">
                         <input type="text" ref={input} placeholder="검색어를 입력하세요." 
@@ -122,7 +114,7 @@ export default function Gallery(){
                                     <div className="inner">
                                         <div className="pic" 
                                             onClick={()=>{
-                                                pop.current.open(); // 자식(Popup.js)에 있는 컴포넌트 전달
+                                                pop.current.open();
                                                 setIndex(idx);
                                             }}>
                                             <img 
@@ -138,14 +130,7 @@ export default function Gallery(){
                                                 );
                                             }}
                                             />
-                                            <span onClick={(e) => {
-                                                if(!EnableClick) return;
-                                                setEnableClick(false);
-                                                setLoading(true);
-                                                frame.current.classList.remove('on');
-                                                getFlickr({type : 'user', user : e.target.innerText}); // 클릭한 애 텍스트가 저어어 주소로 넘어가서 그 아이디의 이미지가 불러옴
-                                            }}
-                                            >{item.owner}</span>
+                                            <span onClick={showUser}>{item.owner}</span>
                                         </div>
                                     </div>
                                 </article>

@@ -1,14 +1,40 @@
-import { combineReducers } from "redux";
+
+import { combineReducers } from 'redux';
+import * as types from './actionType';
+
 
 const youtubeReducer = (state = {youtube:[]}, action) => {
     switch (action.type) {
-        case 'SET_YOUTUBE' :
-            return {...state, youtube: action.payload}
+        case 'types.YOUTUBE.start':
+			return state;
 
-            default:
-                return state;
+		case 'types.YOUTUBE.success':
+			return { ...state, youtube: action.payload }
+
+		case 'types.YOUTUBE.fail':
+			return { ...state, youtube: action.payload }
+
+        default:
+            return state;
     }
 }
 
-const reducers = combineReducers({ youtubeReducer });
+const flickrReducer = (state = { flickr: [] }, action) => {
+	switch (action.type) {
+		case 'types.FLICKR.start':
+			return state;
+
+		case 'types.FLICKR.success':
+			return { ...state, flickr: action.payload }
+
+		case 'types.FLICKR.fail':
+			return { ...state, flickr: action.payload }
+
+		default:
+			return state;
+	}
+}
+
+const reducers = combineReducers({ youtubeReducer, flickrReducer });
+
 export default reducers;

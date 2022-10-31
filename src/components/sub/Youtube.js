@@ -49,7 +49,7 @@ export default function Youtube() {
 
         <Popup ref={pop}>
             {Vids.length !== 0 && (
-                    <iframe src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`} frameborder="0"></iframe>    
+                    <iframe src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`} frameBorder="0"></iframe>    
                 )
             }
         </Popup>
