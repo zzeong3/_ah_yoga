@@ -52,7 +52,7 @@ footer {
                         display:block;padding-left:18px;
                         font-weight:500;
                         color:#101010;
-                        background:url(../../../public/img/ico_gnb.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
+                        background:url(../../../public/img/ico_star.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
                         transition-duration: .1s;
                         &:hover,&.on {
                             background-position: 0 50%;
@@ -114,7 +114,7 @@ footer {
             bottom:auto;
             width:40px;
             height:40px;
-            background-image:url(../../../public/img/ico_gnb.svg);
+            background-image:url(../../../public/img/ico_star.svg);
             background-position:50% 50%;
             background-size:contain;
             background-repeat:no-repeat;

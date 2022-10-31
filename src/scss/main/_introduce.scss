@@ -1,0 +1,78 @@
+#introduce {
+    position:relative;
+    width:1180px;margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    padding:85px 76px 64px;
+    .area_thumb {
+        display:flex;
+        .thumb {
+            position:relative;
+            overflow:hidden;
+            width:96px;height:96px;
+            border-radius:50%;
+            img {
+                position:absolute;left:50%;top:-40px;
+                width:250px;height:auto;
+                transform:translate(-50%, 0);
+            }
+            
+        }
+        .info_thumb {
+            padding-left:40px;
+            .name {
+                display:block;
+                font-size:22px;
+                line-height:24px;
+                font-weight:600;
+            }
+            .job {
+                display:block;
+                margin-top:18px;
+                color:$txtColor2;
+            }
+        }
+
+    }
+    
+    .cont {
+        width:560px;font-family:$fontQ;
+        font-size:22px;line-height:30px;
+        color:$txtColor2;
+        .txt {
+            display:block;text-align:right;
+        }
+    }
+
+    .lines {
+        position:absolute;
+        top:0;
+        left:405px;
+        display: flex;
+        width:40px;
+        height:40px;
+        background-image:url(../../../public/img/ico_star.svg);
+        background-position:50% 50%;
+        background-size:contain;
+        background-repeat:no-repeat;
+        .lines_line {
+            position: absolute;
+            right:20px;
+            top:20px;
+            width:1px;
+            height:1px;
+            background-color:#101010;
+            &.line1 {
+                height:200px;
+            }
+            &.line2 {
+                width:425px;
+            }
+            &.line3 {
+                left:20px;
+                right:auto;
+                width:755px;
+            }
+        }
+    }
+}

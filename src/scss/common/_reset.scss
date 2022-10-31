@@ -2,7 +2,7 @@
 ul,ol,li {list-style:none;}
 a {text-decoration:none;}
 body {
-    background:#faf5f0;font-family:'Quicksand';color:#101010;
+    background:#faf5f0;font-family:$fontQ;color:$txtColor;
 }
 table,th,td {
     border-collapse:collapse;

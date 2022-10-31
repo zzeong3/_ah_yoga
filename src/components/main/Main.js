@@ -4,6 +4,7 @@ import News from "./News";
 import Pics from "./Pics";
 import Vids from "./Vids";
 import Visual from "./Visual";
+import Introduce from "./Introduce";
 import Btns from "./Btns";
 import Anime from '../../asset/Anime';
 
@@ -58,9 +59,10 @@ export default function Main() {
     }, [Index]);
 
     return(
-        <main ref = {main} className='myScroll'>
-            <Header type={'main'} />
+        <main ref = {main} className='home'>
+            <Header />
             <Visual />
+            <Introduce />
             <News />
             <Pics Scrolled={Scrolled} start={pos.current[2]}/>
             <Vids />

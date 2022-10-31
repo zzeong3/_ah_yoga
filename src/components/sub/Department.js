@@ -70,7 +70,7 @@ export default function Department() {
                         <li>
                             <div className="cont_img">
                                 <span className="thumb">
-                                    <img src={process.env.PUBLIC_URL + '/img/ico_gnb.svg'} alt=""/>
+                                    <img src={process.env.PUBLIC_URL + '/img/ico_star.svg'} alt=""/>
                                 </span>
                             </div> 
                         </li>

@@ -12,7 +12,7 @@ export default function Pics({Scrolled, start}) {
     return(
         <>
 
-        <main id="pics" className='myScroll'>
+        <section id="pics" className='myScroll'>
             <p 
                 style={{
                         left: 100 + position,
@@ -39,7 +39,7 @@ export default function Pics({Scrolled, start}) {
                 )
             })}
             </ul>
-        </main>
+        </section>
 
         <Popup ref={pop}>
             {Pics.length !== 0 && (

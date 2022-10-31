@@ -47,7 +47,7 @@ export default function News() {
 
 
     return(
-        <main id="news" className='myScroll'>
+        <section id="news" className='myScroll'>
             <h1>News</h1>
             {Posts.map((post, idx) => {
                 if (idx >=5) return; // 5개의 인덱스만 가져다 달라는 의미
@@ -59,7 +59,7 @@ export default function News() {
                     </article>
                 )
             })} 
-        </main>
+        </section>
         
     )
 }

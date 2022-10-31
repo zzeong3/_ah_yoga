@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ a {
 
 body {
   background: #faf5f0;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   color: #101010;
 }
 
@@ -39,6 +40,7 @@ header {
   left: 0;
   top: 0;
   z-index: 2;
+  font-family: "Quicksand", sans-serif;
 }
 header .inner {
   position: relative;
@@ -81,7 +83,7 @@ header .inner #gnb li a {
   font-size: 16px;
   line-height: 22px;
   color: #101010;
-  background: url(../../../public/img/ico_gnb.svg);
+  background: url(../../../public/img/ico_star.svg);
   background-repeat: no-repeat;
   background-position: 6px 50%;
   background-size: 0;
@@ -103,7 +105,7 @@ header .inner .until a {
   font-size: 16px;
   line-height: 22px;
   color: #101010;
-  background: url(../../../public/img/ico_gnb.svg);
+  background: url(../../../public/img/ico_star.svg);
   background-repeat: no-repeat;
   background-position: 6px 50%;
   background-size: 0;
@@ -129,7 +131,7 @@ header .inner .lines {
   display: flex;
   width: 40px;
   height: 40px;
-  background-image: url(../../../public/img/ico_gnb.svg);
+  background-image: url(../../../public/img/ico_star.svg);
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -223,7 +225,7 @@ footer .inner .area_footer .footer_gnb li a {
   padding-left: 18px;
   font-weight: 500;
   color: #101010;
-  background: url(../../../public/img/ico_gnb.svg);
+  background: url(../../../public/img/ico_star.svg);
   background-repeat: no-repeat;
   background-position: 6px 50%;
   background-size: 0;
@@ -291,7 +293,7 @@ footer .inner .lines_center {
   bottom: auto;
   width: 40px;
   height: 40px;
-  background-image: url(../../../public/img/ico_gnb.svg);
+  background-image: url(../../../public/img/ico_star.svg);
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -347,6 +349,10 @@ footer .inner .line_etc.line3 {
   height: 100%;
 }
 
+.home {
+  font-family: "Montserrat", sans-serif;
+}
+
 .content > .inner {
   width: 1180px;
   margin: 225px auto 0;
@@ -357,8 +363,9 @@ footer .inner .line_etc.line3 {
 }
 .content > .inner h2 {
   position: relative;
-  font: 300 80px/1 "Quicksand";
-  color: #111;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 1;
   margin-bottom: 10px;
 }
 .content > .inner .desc_sub {
@@ -376,7 +383,7 @@ footer .inner .line_etc.line3 {
   top: 0;
   width: 30px;
   height: 30px;
-  background: url(../../../public/img/ico_gnb.svg) no-repeat 0 0;
+  background: url(../../../public/img/ico_star.svg) no-repeat 0 0;
   background-size: 30px auto;
 }
 .content.on figure {
@@ -586,13 +593,217 @@ footer .inner .line_etc.line3 {
   position: relative;
   width: 1180px;
   margin: 0 auto;
-  padding-top: 172px;
   z-index: 1;
   overflow: hidden;
+  height: 100vh;
+  padding: 172px 0 0;
 }
 #visual .inner {
-  background: lightgray;
-  height: 100vh;
+  position: relative;
+  height: 100%;
+  padding: 120px 0;
+}
+#visual .inner .tit {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 56px 76px;
+  font-weight: 300;
+  font-size: 81px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+#visual .inner .tit .txt1 {
+  display: inline-block;
+}
+#visual .inner .tit .txt2 {
+  display: block;
+  position: relative;
+  left: 132px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#visual .inner .tit .txt3 {
+  display: block;
+  text-transform: uppercase;
+}
+#visual .inner .tit .txt4 {
+  display: block;
+  position: relative;
+  left: 300px;
+  font-weight: 600;
+}
+#visual .inner .tit .txt4::before {
+  content: "";
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  margin: 10px 16px 0 0;
+  vertical-align: top;
+  background: url(../../../public/img/ico_copyright.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+#visual .inner .left {
+  position: absolute;
+  right: 76px;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 296px;
+  max-height: 632px;
+  background: url(../../../public/img/img14.png) no-repeat 50% 0;
+  background-size: cover;
+  transform: translate(0, -50%);
+}
+#visual .inner .left .ico {
+  position: absolute;
+  top: 145px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  background: url(../../../public/img/ico_star.svg) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#visual .inner .right {
+  position: absolute;
+  right: 415px;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 112px;
+  max-height: 520px;
+  background: url(../../../public/img/img15.png) no-repeat 35% 0;
+  background-size: cover;
+  transform: translate(0, -50%);
+}
+#visual .inner .area_lecture {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 76px;
+  bottom: 100px;
+}
+#visual .inner .area_lecture .lecture_img {
+  position: relative;
+  width: 96px;
+  height: 104px;
+  background: #000;
+}
+#visual .inner .area_lecture .lecture_img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../../public/img/lecture_triangle.svg) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#visual .inner .area_lecture .lecture_img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../../public/img/lecture_numbs.svg) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#visual .inner .area_lecture .lecture_txt {
+  padding-left: 40px;
+}
+#visual .inner .area_lecture .lecture_txt .tit_lecture {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(16, 16, 16, 0.8);
+}
+#visual .inner .area_lecture .lecture_txt .txt_lecture {
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#introduce {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 85px 76px 64px;
+}
+#introduce .area_thumb {
+  display: flex;
+}
+#introduce .area_thumb .thumb {
+  position: relative;
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+#introduce .area_thumb .thumb img {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  width: 250px;
+  height: auto;
+  transform: translate(-50%, 0);
+}
+#introduce .area_thumb .info_thumb {
+  padding-left: 40px;
+}
+#introduce .area_thumb .info_thumb .name {
+  display: block;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+}
+#introduce .area_thumb .info_thumb .job {
+  display: block;
+  margin-top: 18px;
+  color: rgba(16, 16, 16, 0.8);
+}
+#introduce .cont {
+  width: 560px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgba(16, 16, 16, 0.8);
+}
+#introduce .cont .txt {
+  display: block;
+  text-align: right;
+}
+#introduce .lines {
+  position: absolute;
+  top: 0;
+  left: 405px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../public/img/ico_star.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#introduce .lines .lines_line {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 1px;
+  height: 1px;
+  background-color: #101010;
+}
+#introduce .lines .lines_line.line1 {
+  height: 200px;
+}
+#introduce .lines .lines_line.line2 {
+  width: 425px;
+}
+#introduce .lines .lines_line.line3 {
+  left: 20px;
+  right: auto;
+  width: 755px;
 }
 
 .scroll_navi {

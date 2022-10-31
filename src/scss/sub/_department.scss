@@ -31,7 +31,7 @@
                 }
                 &::after {
                     content:"";
-                    position:absolute;z-index:-1;right:-20px;bottom:-20px;width:200px;height:90%;background:#e6904e;
+                    position:absolute;z-index:-1;right:-20px;bottom:-20px;width:200px;height:90%;background:$pointColor;
                 }
             }
             .cont_intro {
@@ -79,7 +79,7 @@
                             font-weight:300;
                             font-size:30px;
                             line-height:20px;
-                            color:#e6904e;
+                            color:$pointColor;
                         }
                     }
                     .cont_img {

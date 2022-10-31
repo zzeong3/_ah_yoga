@@ -17,7 +17,7 @@ export default function Vids() {
     return(
         <>
 
-        <main id="vids" className='myScroll'>
+        <section id="vids" className='myScroll'>
             {youtube.length !==0 && (
                 <Swiper ref={swperRef}
                 modules={[Pagination, Navigation, Autoplay]}
@@ -64,7 +64,7 @@ export default function Vids() {
                </Swiper>
              )}
            
-        </main>
+        </section>
 
         <Popup ref={pop}>
         {youtube.length !== 0 && (
