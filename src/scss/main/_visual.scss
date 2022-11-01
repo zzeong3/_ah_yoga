@@ -2,7 +2,8 @@
     position:relative;width:1180px;margin:0 auto;
     z-index:1;
     overflow:hidden;
-    height:100vh;
+    min-height:856px;
+    height:95vh;
     padding:172px 0 0;
     .inner {
         position:relative;
@@ -75,7 +76,7 @@
         .area_lecture {
             display:flex;
             align-items:center;
-            position:absolute;left:76px;bottom:100px;
+            position:absolute;left:76px;bottom:4%;
             .lecture_img {
                 position:relative;
                 width:96px;
