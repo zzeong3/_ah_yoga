@@ -18,6 +18,24 @@ export default function Vids() {
         <>
 
         <section id="vids" className='myScroll'>
+            <div class="lines">
+                <div class="lines_line line1"></div>
+                <div class="lines_line line2"></div>
+            </div>
+            <div className='info_tit'>
+                <h2 className='tit'>
+                    <span className='txt1'>
+                        <span className='ico'></span>UDI activity
+                    </span>
+                    <span className='txt2'>
+                        with <span className='inner_txt'>youtube</span>
+                    </span>
+                </h2>
+                <p className='desc'>
+                    <span className='txt'>Programs include Master</span>
+                    of Architecture (M Arch), Specialist of Landscape Architecture, with Designer of Science in Design, was Master of Arts
+                </p>
+            </div>
             {youtube.length !==0 && (
                 <Swiper ref={swperRef}
                 modules={[Pagination, Navigation, Autoplay]}
@@ -26,13 +44,13 @@ export default function Vids() {
                         clickable : true,
                     }
                 }
-                spaceBetween={60}
+                spaceBetween={120}
                 loop={true}
-                slidesPerView= {"auto"}
+                slidesPerView= {3}
                 centeredSlides={true}
                 navigation={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: true,
                 }}
                 breakpoints={{
@@ -40,7 +58,7 @@ export default function Vids() {
                       slidesPerView: 1,  
                     },
                     580: {
-                      slidesPerView: 'auto', 
+                      slidesPerView: 3, 
                     },
                   }}
     
@@ -56,7 +74,7 @@ export default function Vids() {
                                         }}>
                                         <img src={vid.snippet.thumbnails.standard.url} alt="" />
                                     </div>
-                                    <h2>{vid.snippet.title}</h2>
+                                    <strong><span className='num'>0{idx + 1}.</span>{vid.snippet.title}</strong>
                                 </div>
                             </SwiperSlide>
                         )

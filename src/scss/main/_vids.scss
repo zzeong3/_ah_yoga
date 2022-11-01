@@ -1,47 +1,117 @@
 #vids {
-    width:100%;height:100vh;
-    background:linear-gradient(45deg, violet, cornflowerblue);
     position:relative;
-    
+    width:1180px;margin:0 auto;
+    padding:64px 0;
+    min-height:856px;
+    height:95vh;
+    position:relative;
+
+    .lines {
+        position:absolute;
+        right:224px;top:0;
+        width:40px;height:40px;
+        background:url(../../../public/img/ico_star.svg) no-repeat 50% 50%;background-size:contain;
+        .lines_line {
+            position:absolute;
+            right:20px;
+            bottom:20px;
+            width:1px;
+            height:1px;
+            background-color:#101010;
+            &.line1 {
+                width:936px;
+            }
+            &.line2 {
+                left:20px;
+                right:auto;
+                width:224px;
+            }
+        }
+    }
+    .info_tit {
+        display:flex;
+        justify-content:space-between;
+        margin-top:40px;
+        .tit {
+            font-weight:300;
+            font-size:81px;
+            line-height:1.1;
+            letter-spacing: -1px;
+            text-transform:uppercase;
+            .txt1 {
+                display:block;
+                font-weight:700;
+                .ico {
+                    display:inline-block;
+                    width:54px;height:54px;
+                    margin:15px 17px 0 0;
+                    vertical-align:top;
+                    background:url(../../../public/img/ico_star.svg) no-repeat 50% 50%;background-size:contain;
+                }
+            }
+            .txt2 {
+                display:block;
+                margin-left:130px;
+                .inner_txt {
+                    font-weight:700;
+                }
+            }
+        }
+        .desc {
+            width:350px;
+            font-size:22px;
+            line-height:34px;
+            font-family:$fontQ;
+            color:$txtColor2;
+            .txt {
+                display:block;
+                text-align:right;
+            }
+        }
+    }
 
     .swiper {
-        height:100%;
-        padding:15vh 0;
-
+        margin-top:130px;
         .swiper-slide {
-            width:600px;
             .inner {
                 width:100%;
-                height:100%;
-                padding:30px;
-                background:#fff;
-                opacity:.5;
-                transform:scale(.8);
-                transition:opacity .5s, transform .5s;
-
+                height:auto;
+                padding:30px 20px 50px;
+                background:#f3e9e4;
+                border:2px solid #000;
+                border-left:0;border-right:0;
+                
                 .pic {
                     width:100%;
-                    height:200px;
+                    height:150px;
                     overflow:hidden;
-                    margin-bottom: 20px;
+                    margin:0 auto 20px;
                     cursor:pointer;
+                    border:1px solid #efefef;
 
                     img {
-                        width:100%;height:100%;object-fit:cover
+                        width:100%;height:100%;object-fit:cover;
                     }
                 }
-                h2 {
-                    font:normal 25px/1.4 'work sans';
-                    color:#555;
+                strong {
+                    font-weight:400;
+                    font-size:18px;
+                    line-height:26px;
+                    font-family:$fontQ;
+                    color:$txtColor;
+                    .num {
+                        display:block;
+                        font-size:20px;
+                        font-family:$fontM;
+                        font-weight:700;
+                        margin-bottom:10px;
+                    }
 
                 }
             }
-            &.swiper-slide-active {
-                .inner {
-                    opacity:1;
-                    transform:scale(1);
-                }
-            }
+
+            
+
         }
 
         .swiper-pagination {

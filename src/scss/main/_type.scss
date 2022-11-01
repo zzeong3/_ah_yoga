@@ -1,0 +1,82 @@
+#type {
+    position:relative;
+    width:1180px;margin:0 auto;
+    padding:64px 0;
+    min-height:856px;
+    height:95vh;
+    .box_big {
+        position:relative;
+        height:650px;
+        img {
+            width:100%;height:100%;object-fit:cover;
+        }
+        .box_smail {
+            position:absolute;
+            right:70px;bottom:-50px;
+            width:334px;height:476px;
+            padding:40px 38px;
+            border:1px solid #000;
+            background:#f3e9e4;
+            .thumb_small {
+                position:relative;
+                width:256px;height:164px;
+                overflow:hidden;
+                img {
+                    position:absolute;left:0;bottom:-30px;
+                    width:100%;height:auto;object-fit:cover;
+                }
+            }
+            .tit {
+                display:block;
+                margin-top:40px;
+                font-size:22px;line-height:24px;
+                text-transform:uppercase;
+            }
+            .desc {
+                margin-top:16px;
+                font-family:$fontQ;
+                font-size:16px;
+                line-height:24px;
+                color:$txtColor2;
+            }
+        }
+    }
+
+    .paging {
+        position:absolute;
+        left:76px;bottom:88px;
+        display:flex;
+        justify-content:center;
+        a {
+            display:block;
+            min-width:120px;
+            padding:0 15px;
+            margin-right:16px;
+            height:33px;
+            font-weight:500;
+            font-family:$fontQ;
+            font-size:16px;
+            line-height:33px;
+            border:1px solid #000;
+            border-radius:15px;
+            color:$txtColor;
+            text-align:center;
+            .txt {
+                padding-left:16px;
+                background-image: url(../../../public/img/ico_star.svg);
+                background-repeat: no-repeat;
+                background-position:0 49%;
+                background-size:12px;
+                transition:.5s;
+            }
+            
+            &:hover, &.on {
+                background:#000;
+                color:#e1d4d5;
+                .txt {
+                    background-image: url(../../../public/img/ico_star_white.svg);
+                }
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
 ul,ol,li {list-style:none;}
 a {text-decoration:none;}
 body {
-    background:#faf5f0;font-family:$fontQ;color:$txtColor;
+    background-image:radial-gradient(circle farthest-corner at 0 45%,#cdc4cd,#faf5f0),radial-gradient(circle farthest-corner at 0 55%,#cdc4cd,#faf5f0);font-family:$fontQ;color:$txtColor;
 }
 table,th,td {
     border-collapse:collapse;

@@ -1,6 +1,6 @@
-export default function introduce() {
+export default function Introduce() {
   return (
-    <section id="introduce">
+    <section id="introduce" className='myScroll'>
         <h2 className="hidden">Representative introduction</h2>
         <div className="area_thumb">
             <div className="thumb">

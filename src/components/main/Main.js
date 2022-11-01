@@ -5,6 +5,7 @@ import Pics from "./Pics";
 import Vids from "./Vids";
 import Visual from "./Visual";
 import Introduce from "./Introduce";
+import Type from './Type';
 import Btns from "./Btns";
 import Anime from '../../asset/Anime';
 
@@ -63,9 +64,10 @@ export default function Main() {
             <Header />
             <Visual />
             <Introduce />
+            <Type />
+            <Vids />
             <News />
             <Pics Scrolled={Scrolled} start={pos.current[2]}/>
-            <Vids />
             <Btns setIndex={setIndex} />
         </main>
     )
