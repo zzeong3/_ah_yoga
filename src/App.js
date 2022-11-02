@@ -26,12 +26,12 @@ function App() {
 
 	useEffect(() => {
 		dispatch({
-			type: 'types.YOUTUBE.start'
+			type: types.YOUTUBE.start
 	})
 
 		
 	dispatch({
-	type: 'types.FLICKR.start',
+	type: types.FLICKR.start,
 	Opt: {type : 'user', user: '188875987@N03'}
 	})
 	}, []);

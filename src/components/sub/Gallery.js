@@ -3,6 +3,7 @@ import Layout from '../common/Layout';
 import Popup from '../common/Popup';
 import { useSelector, useDispatch } from 'react-redux';
 import Masonry from 'react-masonry-component';
+import * as types from '../../redux/actionType';
 
 
 export default function Gallery(){
@@ -62,7 +63,7 @@ export default function Gallery(){
     useEffect (showMine, [])
 
     useEffect(()=>{
-        dispatch({type: 'types.FLICKR.start', Opt})
+        dispatch({type: types.FLICKR.start, Opt})
     },[Opt])
 
 

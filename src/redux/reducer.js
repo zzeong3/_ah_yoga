@@ -5,13 +5,13 @@ import * as types from './actionType';
 
 const youtubeReducer = (state = {youtube:[]}, action) => {
     switch (action.type) {
-        case 'types.YOUTUBE.start':
+        case types.YOUTUBE.start:
 			return state;
 
-		case 'types.YOUTUBE.success':
+		case types.YOUTUBE.success:
 			return { ...state, youtube: action.payload }
 
-		case 'types.YOUTUBE.fail':
+		case types.YOUTUBE.fail:
 			return { ...state, youtube: action.payload }
 
         default:
@@ -21,13 +21,13 @@ const youtubeReducer = (state = {youtube:[]}, action) => {
 
 const flickrReducer = (state = { flickr: [] }, action) => {
 	switch (action.type) {
-		case 'types.FLICKR.start':
+		case types.FLICKR.start:
 			return state;
 
-		case 'types.FLICKR.success':
+		case types.FLICKR.success:
 			return { ...state, flickr: action.payload }
 
-		case 'types.FLICKR.fail':
+		case types.FLICKR.fail:
 			return { ...state, flickr: action.payload }
 
 		default:
