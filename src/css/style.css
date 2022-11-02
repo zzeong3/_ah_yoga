@@ -40,6 +40,10 @@ textarea::placeholder {
   font-family: "Quicksand", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
   display: block;
   min-width: 120px;
@@ -56,7 +60,6 @@ textarea::placeholder {
   text-align: center;
   transition: 0.5s;
   background: transparent;
-  cursor: pointer;
 }
 .btn .txt {
   padding-left: 16px;
@@ -918,7 +921,7 @@ footer .inner .line_etc.line3 {
 }
 #story .info_story {
   display: flex;
-  padding: 40px 0;
+  padding: 80px 0 0;
   align-items: center;
 }
 #story .info_story .community {
@@ -1297,102 +1300,141 @@ footer .inner .line_etc.line3 {
   z-index: 0;
   transform: translateX(-50%);
 }
-.Gallery .controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.Gallery .info {
+  position: relative;
+  padding-left: 240px;
 }
-.Gallery .controls nav {
-  padding: 10px;
-  display: flex;
-  gap: 20px;
+.Gallery .info .controls {
+  position: absolute;
+  left: 0;
+  top: 110px;
 }
-.Gallery .controls nav button {
+.Gallery .info .controls nav button {
+  position: relative;
+  display: block;
+  padding-left: 18px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #101010;
+  background: url(../../../public/img/ico_star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 12px;
+  transition-duration: 0.1s;
   border: 0;
-  width: 130px;
-  height: 30px;
-  background: #555;
-  font: 12px/30px "arial";
-  color: #ddd;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
-.Gallery .controls .searchBox {
-  padding-right: 15px;
+.Gallery .info .controls nav button::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+  width: 0;
+  transition: 0.2s;
 }
-.Gallery .controls .searchBox input {
-  margin-right: 15px;
-  width: 200px;
-  height: 26px;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 3px 8px;
+.Gallery .info .controls nav button:hover::after {
+  width: 84%;
 }
-.Gallery .controls .searchBox button {
-  width: 80px;
-  height: 26px;
+.Gallery .info .controls .searchBox {
+  position: relative;
+  width: 190px;
+  height: 36px;
+  padding-right: 20px;
+  border-bottom: 1px solid #000;
+}
+.Gallery .info .controls .searchBox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 6px 8px;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+.Gallery .info .controls .searchBox input::placeholder {
+  font-size: 20px;
+}
+.Gallery .info .controls .searchBox button {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 20px;
+  height: 20px;
   border: 0;
   background: #555;
-  font: 12px/26px "arial";
-  color: #fff;
-  cursor: pointer;
 }
-.Gallery .frame {
+.Gallery .info .frame {
   transform: translateY(200px);
   opacity: 0;
   transition: all 0.5s;
 }
-.Gallery .frame.on {
+.Gallery .info .frame.on {
   transform: translateY(0);
   opacity: 1;
 }
-.Gallery .frame::after {
+.Gallery .info .frame::after {
   content: "";
   display: block;
   clear: both;
 }
-.Gallery .frame article {
+.Gallery .info .frame article {
   width: 25%;
   padding: 10px;
   float: left;
+  transition: 0.3s;
 }
-.Gallery .frame article .inner {
+.Gallery .info .frame article .inner {
   width: 100%;
-  padding: 10px;
-  background: white;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 30px 10px 20px;
+  border: 2px solid #cdc4cd;
+  background: #f3e9e4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.Gallery .frame article .inner .pic {
+.Gallery .info .frame article .inner .pic {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
-.Gallery .frame article .inner .pic img {
+.Gallery .info .frame article .inner .pic img {
   width: 100%;
 }
-.Gallery .frame article .inner h2 {
-  font: normal 14px/1.2 "arial";
-  color: #777;
+.Gallery .info .frame article .inner strong {
+  display: block;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: rgba(16, 16, 16, 0.8);
   margin-bottom: 30px;
 }
-.Gallery .frame article .inner .profile {
+.Gallery .info .frame article .inner .profile {
   display: flex;
   align-items: center;
 }
-.Gallery .frame article .inner .profile img {
+.Gallery .info .frame article .inner .profile img {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.Gallery .frame article .inner .profile span {
+.Gallery .info .frame article .inner .profile span {
   color: orange;
   cursor: pointer;
   transition: 0.5s;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 14px;
   word-break: break-all;
 }
-.Gallery .frame article .inner .profile span:hover {
-  color: aqua;
+.Gallery .info .frame article .inner .profile span:hover {
+  color: rgba(16, 16, 16, 0.8);
+}
+.Gallery .info .frame article:hover {
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 1179px) {
@@ -1532,49 +1574,70 @@ footer .inner .line_etc.line3 {
     width: 100%;
   }
 }
-.Youtube article {
-  border-top: 1px solid #aaa;
-  padding: 20px 0;
+.Youtube .info {
+  padding-top: 0;
+  border-top: 0;
+}
+.Youtube .info article {
+  position: relative;
+  border-top: 1px solid #000;
+  padding: 30px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  transition: 0.3s;
 }
-.Youtube article h3 {
+.Youtube .info article h3 {
+  width: 20%;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.Youtube .info article .txt {
   width: 50%;
-  font-weight: bold;
-  font-size: 22px;
-  font-family: "work sans";
-  color: #777;
-}
-.Youtube article .txt {
-  width: 38%;
+  padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: end;
   align-content: space-between;
 }
-.Youtube article .txt p {
-  font: 14px/1.2 "arial";
-  color: #999;
-  filter: saturate(0);
+.Youtube .info article .txt p {
+  font-size: 18px;
+  line-height: 24px;
 }
-.Youtube article .txt span {
-  font: 12px/1 "arial";
-  color: orange;
+.Youtube .info article .txt span {
+  font-size: 16px;
+  color: rgba(16, 16, 16, 0.8);
 }
-.Youtube article .pic {
+.Youtube .info article .pic {
   width: 40%;
   height: 200px;
   background: #000;
-  filter: saturate(0);
+  filter: saturate(0.5);
   transition: 0.5s;
+  cursor: pointer;
 }
-.Youtube article .pic img {
+.Youtube .info article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.Youtube article .pic:hover {
-  filter: saturate(1.2);
+.Youtube .info article .pic:hover {
+  filter: saturate(1);
+}
+.Youtube .info article:hover {
+  background: #f3e9e4;
+}
+.Youtube .info article::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../public/img/ico_star.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1179px) {

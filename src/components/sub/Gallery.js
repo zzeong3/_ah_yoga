@@ -94,15 +94,15 @@ export default function Gallery(){
                 )}
                 <div className="controls">
                     <nav>
-                        <button onClick={showInterest}>Interest Gallery</button>
-                        <button onClick={showMine}>My Gallery</button>
+                        <button onClick={showInterest}>POPULAR</button>
+                        <button onClick={showMine}>AH-YOGA</button>
                     </nav>
                     <div className="searchBox">
-                        <input type="text" ref={input} placeholder="검색어를 입력하세요." 
+                        <input type="text" ref={input} placeholder="Search" 
                         onKeyUp={(e)=>{
                             if(e.key === 'Enter') showSearch();
                         }}/>
-                        <button onClick={showSearch}>Search</button>
+                        <button onClick={showSearch}><span className='hidden'>Search</span></button>
                     </div>
                 </div>
                 
@@ -121,7 +121,7 @@ export default function Gallery(){
                                             <img 
                                             src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`} alt={item.title} />
                                         </div>
-                                        <h2>{item.title}</h2>
+                                        <strong>{item.title}</strong>
 
                                         <div className="profile">
                                             <img src={`http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`} alt={item.owner} 

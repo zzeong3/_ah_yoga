@@ -32,7 +32,7 @@ export default function Youtube() {
                         <article key={ index }>
                             <h3>{title.length >30 ? title.substr(0, 30) + '...' : title}</h3>
                             <div className="txt">
-                                <p>{desc.length >100 ? title.substr(0, 100) + '...' : desc}</p>
+                                <p>{desc.length >500 ? title.substr(0, 500) + '...' : desc}</p>
                                 <span>{date.split('T')[0]}</span>
                             </div>
                             <div className="pic" onClick={()=>{ 

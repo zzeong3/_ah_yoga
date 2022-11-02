@@ -1,41 +1,63 @@
 .Youtube {
-    article {
-        border-top:1px solid #aaa;
-        padding:20px 0;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:space-between;
-        h3 {
-            width:50%;
-            font-weight:bold;
-            font-size:22px;
-            font-family:'work sans';
-            color:#777;
-        }
-        .txt {
-            width:38%;display:flex;
-            flex-wrap:wrap;
-            align-content:space-between;
-            p {
-                font:14px/1.2 'arial';color:#999;
-                filter:saturate(0);
+    .info {
+        padding-top:0;
+        border-top:0;
+        article {
+            position:relative;
+            border-top:1px solid #000;
+            padding:30px;
+            display:flex;
+            justify-content:space-between;
+            transition:.3s;
+            h3 {
+                width:20%;
+                font-size:25px;
+                font-weight:600;
+                font-family:$fontM;
             }
-            span {
-                font:12px/1 'arial';color:orange;
+            .txt {
+                width:50%;padding:0 40px;display:flex;
+                flex-wrap:wrap;
+                justify-content:end;
+                align-content:space-between;
+                p {
+                    font-size:18px;line-height:24px;
+                }
+                span {
+                    font-size:16px;color:$txtColor2;
+                }
             }
-        }
-        .pic {
-            width:40%;height:200px;background:#000;
-            filter: saturate(0);
-            transition: .5s;
-            img {
-                width:100%;height:100%;object-fit:cover;
+            .pic {
+                width:40%;height:200px;background:#000;
+                filter: saturate(.5);
+                transition: .5s;
+                cursor:pointer;
+                img {
+                    width:100%;height:100%;object-fit:cover;
+                }
+                &:hover {
+                    filter:saturate(1);
+                }
             }
             &:hover {
-                filter:saturate(1.2);
+                background:#f3e9e4;
+            }
+            &::before {
+                content:"";
+                position:absolute;
+                left:20%;
+                top:-20px;
+                width: 40px;
+                height: 40px;
+                background-image: url(../../../public/img/ico_star.svg);
+                background-position: 50% 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
         }
     }
+    
+    
 }
 
 @media screen and (max-width:$tablet) {
