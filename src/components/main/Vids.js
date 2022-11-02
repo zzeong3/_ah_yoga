@@ -20,7 +20,7 @@ export default function Vids() {
             <div className='info_tit'>
                 <h2 className='tit'>
                     <span className='txt1'>
-                        <span className='ico'></span>UDI activity
+                        <span className='ico'></span>yoga activity
                     </span>
                     <span className='txt2'>
                         with <span className='inner_txt'>youtube</span>

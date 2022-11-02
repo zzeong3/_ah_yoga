@@ -1,0 +1,129 @@
+#story {
+    position:relative;width:1180px;margin:0 auto;
+    z-index:1;
+    overflow:hidden;
+    min-height:856px;
+    
+
+    .lines {
+        position:absolute;
+        left:320px;top:0;
+        width:40px;height:40px;
+        background:url(../../../public/img/ico_star.svg) no-repeat 50% 50%;background-size:contain;
+        .lines_line {
+            position:absolute;
+            right:20px;
+            bottom:20px;
+            width:1px;
+            height:1px;
+            background-color:#101010;
+            &.line1 {
+                width:936px;
+            }
+            &.line2 {
+                left:20px;
+                right:auto;
+                width:840px;
+            }
+        }
+    }
+
+    .line3 {
+        width: 100%;
+        height: 1px;
+        padding: 0;
+        background-color: #101010;
+    }
+
+
+    .tit {
+        font-weight:700;
+        font-size:120px;line-height:1;
+        letter-spacing:-2px;
+        text-align:right;
+        padding:70px 5px 40px 0
+    }
+
+    
+    .info_story {
+        display:flex;
+        padding:40px 0;
+        align-items:center;
+        .community {
+            position:relative;
+            width:1200px;
+            article {
+                padding:20px;
+                transform:translateX(-100px) rotateY(180deg);
+                opacity:0;
+                transition:.5s;
+            
+                @for $i from 1 through 5 {
+                    &:nth-of-type(#{$i}) {transition-delay:.1s * $i;}
+                }
+                strong {
+                    display:block;
+                    font-size:20px;
+                    line-height:24px;
+                    font-family:$fontM;
+                    margin-bottom:15px;
+                }
+                p {
+                    font-size:16px;
+                    line-height:24px;
+                    font-family:$fontQ;
+                }
+            }        
+        }
+    
+        .pics {
+            width:100%;
+            .list_pics {
+                width:100%;
+                display:flex;
+                align-content:center;
+                flex-wrap: wrap;
+                gap:20px;
+                justify-content:center;
+                li {
+                    box-shadow:5px 10px 10px rgba(205, 196, 205);
+                    overflow:hidden;
+                    cursor: pointer;
+                    transition:.3s;
+                    img {
+                        width:100%;height:100%;object-fit:cover;
+                        
+                    }
+                    &:hover {
+                        transform: rotate(10deg);
+                    }
+                    &:nth-of-type(2),
+                    &:nth-of-type(5) {
+                        transform: rotate(10deg);
+                        &:hover {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:nth-of-type(3),
+                    &:nth-of-type(7) {
+                        transform: rotate(-10deg);
+                        &:hover {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.on {
+        .community {
+            article {
+                opacity:1;transform:translateX(0) rotateY(0);
+            }
+        }
+        
+    }
+    
+}

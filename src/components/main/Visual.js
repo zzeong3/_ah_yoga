@@ -3,9 +3,9 @@ export default function Visual() {
         <figure id="visual" className='myScroll'>
             <div className="inner">
                 <h2 className="tit">
-                    <span className="txt1">URBANISTIC</span>
+                    <span className="txt1">90% PRACTICE</span>
                     <span className="txt2">development</span>
-                    <span className="txt3">institute</span>
+                    <span className="txt3">1% THEOTY</span>
                     <span className="txt4">2022</span>
                 </h2>
                 <div className="left">

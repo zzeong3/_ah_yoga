@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from "../common/Header";
-import News from "./News";
-import Pics from "./Pics";
-import Vids from "./Vids";
 import Visual from "./Visual";
 import Introduce from "./Introduce";
 import Type from './Type';
+import Vids from "./Vids";
+import Story from './Story';
+
 import Btns from "./Btns";
 import Anime from '../../asset/Anime';
 
@@ -66,8 +66,7 @@ export default function Main() {
             <Introduce />
             <Type />
             <Vids />
-            <News />
-            <Pics Scrolled={Scrolled} start={pos.current[2]}/>
+            <Story />
             <Btns setIndex={setIndex} />
         </main>
     )

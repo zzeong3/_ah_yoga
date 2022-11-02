@@ -21,7 +21,7 @@ export default function Type() {
             <div className='paging'>
                 <a href='' className='on'><span className='txt'>Ashtanga</span>
                 </a>
-                <a href=''><span className='txt'>Hataspan</span></a>
+                <a href=''><span className='txt'>Hata</span></a>
                 <a href=''><span className='txt'>Vinyasa</span></a>
                 <a href=''><span className='txt'>Bikram</span></a>
             </div>

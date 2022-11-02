@@ -12,7 +12,7 @@
         }
         .box_smail {
             position:absolute;
-            right:70px;bottom:-50px;
+            right:70px;bottom:-60px;
             width:334px;height:476px;
             padding:40px 38px;
             border:1px solid #000;
@@ -43,10 +43,8 @@
     }
 
     .paging {
-        position:absolute;
-        left:76px;bottom:88px;
         display:flex;
-        justify-content:center;
+        margin-top:27px;
         a {
             display:block;
             min-width:120px;
