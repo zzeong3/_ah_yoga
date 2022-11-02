@@ -45,36 +45,6 @@
     .paging {
         display:flex;
         margin-top:27px;
-        a {
-            display:block;
-            min-width:120px;
-            padding:0 15px;
-            margin-right:16px;
-            height:33px;
-            font-weight:500;
-            font-family:$fontQ;
-            font-size:16px;
-            line-height:33px;
-            border:1px solid #000;
-            border-radius:15px;
-            color:$txtColor;
-            text-align:center;
-            .txt {
-                padding-left:16px;
-                background-image: url(../../../public/img/ico_star.svg);
-                background-repeat: no-repeat;
-                background-position:0 49%;
-                background-size:12px;
-                transition:.5s;
-            }
-            
-            &:hover, &.on {
-                background:#000;
-                color:#e1d4d5;
-                .txt {
-                    background-image: url(../../../public/img/ico_star_white.svg);
-                }
-            }
-        }
+        
     }
 }

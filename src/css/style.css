@@ -34,6 +34,45 @@ fieldset {
   opacity: 0;
 }
 
+input::placeholder,
+textarea::placeholder {
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.btn {
+  display: block;
+  min-width: 120px;
+  padding: 0 15px;
+  margin-right: 16px;
+  height: 33px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  line-height: 33px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  color: #101010;
+  text-align: center;
+  transition: 0.5s;
+  background: transparent;
+  cursor: pointer;
+}
+.btn .txt {
+  padding-left: 16px;
+  background-image: url(../../../public/img/ico_star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 49%;
+  background-size: 12px;
+}
+.btn:hover, .btn.on {
+  background: #000;
+  color: #e1d4d5;
+}
+.btn:hover .txt, .btn.on .txt {
+  background-image: url(../../../public/img/ico_star_white.svg);
+}
+
 header {
   width: 100%;
   position: absolute;
@@ -708,36 +747,6 @@ footer .inner .line_etc.line3 {
   display: flex;
   margin-top: 27px;
 }
-#type .paging a {
-  display: block;
-  min-width: 120px;
-  padding: 0 15px;
-  margin-right: 16px;
-  height: 33px;
-  font-weight: 500;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
-  line-height: 33px;
-  border: 1px solid #000;
-  border-radius: 15px;
-  color: #101010;
-  text-align: center;
-}
-#type .paging a .txt {
-  padding-left: 16px;
-  background-image: url(../../../public/img/ico_star.svg);
-  background-repeat: no-repeat;
-  background-position: 0 49%;
-  background-size: 12px;
-  transition: 0.5s;
-}
-#type .paging a:hover, #type .paging a.on {
-  background: #000;
-  color: #e1d4d5;
-}
-#type .paging a:hover .txt, #type .paging a.on .txt {
-  background-image: url(../../../public/img/ico_star_white.svg);
-}
 
 #vids {
   position: relative;
@@ -1015,66 +1024,112 @@ footer .inner .line_etc.line3 {
 }
 
 .Community > .inner .inputBox {
-  width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px;
-  margin-bottom: 50px;
-}
-.Community > .inner .inputBox input[type=text],
-.Community > .inner .inputBox textarea {
   width: 50%;
-  padding: 8px 10px;
-  border: 1px solid #aaa;
-  margin-bottom: 20px;
-  resize: none;
 }
-.Community > .inner .inputBox .btnSet button {
-  width: 150px;
-  height: 30px;
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: #fff;
-  cursor: pointer;
-  margin-right: 20px;
+.Community > .inner .inputBox strong {
+  display: block;
+  font-size: 30px;
+  line-height: 25px;
+}
+.Community > .inner .inputBox input[type=text] {
+  width: 100%;
+  padding: 15px;
+  height: 50px;
+  border: 0;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  margin: 10px 0 50px 0;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 24px;
+}
+.Community > .inner .inputBox textarea {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  background: #f3e9e4;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  height: 180px;
+  resize: none;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 24px;
+}
+.Community > .inner .inputBox .btnSet {
+  display: flex;
+}
+.Community > .inner .inputBox .btnSet .btn {
+  background: #000;
+  color: #e1d4d5;
+}
+.Community > .inner .inputBox .btnSet .btn .txt {
+  background-image: url(../../../public/img/ico_star_white.svg);
 }
 .Community > .inner .showBox {
   width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px;
+  margin-top: 120px;
 }
 .Community > .inner .showBox article {
-  background: #fff;
-  padding: 30px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: center;
+  position: relative;
+  padding: 40px 40px 40px 150px;
+  border-top: 1px solid #000;
+  transition: 0.3s;
 }
-.Community > .inner .showBox article .editTxt {
-  width: 60%;
+.Community > .inner .showBox article em {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+.Community > .inner .showBox article .txt strong {
+  display: block;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  line-height: 40px;
+}
+.Community > .inner .showBox article .txt p {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .Community > .inner .showBox article .editTxt input[type=text],
 .Community > .inner .showBox article .editTxt textarea {
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid lightblue;
+  border: 1px solid #000;
   margin-bottom: 20px;
-  background: #eaf9f9;
+  background: #f3e9e4;
   resize: none;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 24px;
 }
 .Community > .inner .showBox article .btnSet {
   display: flex;
+  justify-content: end;
+  margin-top: 20px;
   align-items: center;
 }
-.Community > .inner .showBox article .btnSet button {
-  background: #fff;
-  margin: 10px;
-  padding: 0 10px;
-  height: 20px;
-  cursor: pointer;
-  border: 1px solid #999;
+.Community > .inner .showBox article .btnSet .btn {
+  min-width: auto;
+}
+.Community > .inner .showBox article:hover {
+  background: #f3e9e4;
+}
+.Community > .inner .showBox article::before {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../public/img/ico_star.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1098,8 +1153,8 @@ footer .inner .line_etc.line3 {
   .Community > .inner .showBox article .btnSet {
     margin-top: 20px;
   }
-  .Community > .inner .showBox article .btnSet button {
-    margin-left: 0;
+  .Community > .inner .showBox article .btnSet .btn {
+    min-width: none;
   }
 }
 .Department .bg {

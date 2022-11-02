@@ -19,11 +19,11 @@ export default function Type() {
             </div>
         
             <div className='paging'>
-                <a href='' className='on'><span className='txt'>Ashtanga</span>
+                <a href='' className='btn on'><span className='txt'>Ashtanga</span>
                 </a>
-                <a href=''><span className='txt'>Hata</span></a>
-                <a href=''><span className='txt'>Vinyasa</span></a>
-                <a href=''><span className='txt'>Bikram</span></a>
+                <a href='' className='btn'><span className='txt'>Hata</span></a>
+                <a href='' className='btn'><span className='txt'>Vinyasa</span></a>
+                <a href='' className='btn'><span className='txt'>Bikram</span></a>
             </div>
         
     </section>

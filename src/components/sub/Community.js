@@ -109,13 +109,15 @@ export default function Community() {
 
             <div className="info">
                 <div className="inputBox">
-                    <input type="text" placeholder="제목을 입력하세요." ref={input} />
+                    <strong>TITLE.</strong>
+                    <input type="text" placeholder="Please enter a title." ref={input} />
                     <br />
-                    <textarea cols="30" rows="5" placeholder="본문을 입력하세요." ref={textarea}></textarea>
+                    <strong>CONTENTS.</strong>
+                    <textarea cols="30" rows="5" placeholder="Please enter your text." ref={textarea}></textarea>
                     <br />
                     <div className="btnSet">
-                        <button onClick={resetForm}>CANCLE</button>
-                        <button onClick={createPost}>WRITE</button>
+                        <button onClick={resetForm} className='btn'><span className='txt'>CANCLE</span></button>
+                        <button onClick={createPost} className='btn'><span className='txt'>WRITE</span></button>
                     </div>
                     
                 </div>
@@ -123,46 +125,38 @@ export default function Community() {
                 <div className="showBox">
                     {Posts.map((post, idx)=>{
                         return (
-                            <article key={idx}>      
+                            <article key={idx}> 
                                 {post.enabledUpdate ? ( 
-                                    // 반복도는 post에서 enableUpdate = true 값이 있으면 수정모드로 랜더링
+                                
                                     <>
-                                        {/* 변화가 일어난 결과 */}
+                                        <em>{idx +1}.</em>
                                         <div className="editTxt">
                                             <input type="text" defaultValue={post.title} ref={inputEdit}/>
-                                            {/* defaultValue 원래 가지고 있었던 값을 유지시켜라 */}
                                             <br />
                                             <textarea cols="30" rows="5" defaultValue={post.content} ref={textareaEdit}></textarea>
                                             <div className="btnSet">
-                                                <button onClick={()=>disableUpdate(idx)}>cancle</button>
-                                                <button onClick={()=>updatePost(idx)}>update</button>
+                                                <button onClick={()=>disableUpdate(idx)} className='btn'><span className="txt"></span>CANCLE</button>
+                                                <button onClick={()=>updatePost(idx)} className='btn'><span className="txt">UPDATE</span></button>
                                             </div>
                                         </div>
                                     </>
                                 ) : (
-                                    // 반복되는 post에서 enabledUpdate = false거나 없으면 일반 출력 모드로 랜더링
+                                   
                                     <>
+                                        <em>{idx +1}.</em>
                                         <div className="txt">
-                                            <h2>{post.title}</h2>
+                                            <strong>{post.title}</strong>
                                             <p>{post.content}</p>
                                         </div>
                                         <div className="btnSet">
-                                            <button onClick={()=>enabledUpdate(idx)}>edit</button>
-                                            <button onClick={()=>deletePost(idx)}>delete</button>
+                                            <button onClick={()=>enabledUpdate(idx)} className='btn'><span className="txt">EDIT</span></button>
+                                            <button onClick={()=>deletePost(idx)} className='btn'><span className="txt">DELETE</span></button>
                                         </div>
                                     </>
                                     )
                                 }
 
-                                {/* <div className="txt">
-                                    <h2>{post.title}</h2>
-                                    <p>{post.content}</p>
-                                </div>
-                                
-                                <div className="btnSet">
-                                    <button onClick={()=>enabledUpdate(idx)}>edit</button>
-                                    <button onClick={()=>deletePost(idx)}>delete</button>
-                                </div> */}
+                            
                             </article>
                         );
                     })}
