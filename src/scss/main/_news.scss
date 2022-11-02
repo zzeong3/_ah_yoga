@@ -1,8 +1,9 @@
 #news {
-    width:1180px;height:100vh;margin:0 auto;
-    background:#c6ffc6;
+    width:1180px;margin:0 auto;
     position:relative;
-    padding:10vw;
+    padding:64px 0;
+    min-height:856px;
+    height:95vh;
 
     display:flex;
     flex-wrap:wrap;
