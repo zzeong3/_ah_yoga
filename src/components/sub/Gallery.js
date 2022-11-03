@@ -4,7 +4,8 @@ import Popup from '../common/Popup';
 import { useSelector, useDispatch } from 'react-redux';
 import Masonry from 'react-masonry-component';
 import * as types from '../../redux/actionType';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons' 
 
 export default function Gallery(){
     const dispatch = useDispatch(); 
@@ -102,7 +103,10 @@ export default function Gallery(){
                         onKeyUp={(e)=>{
                             if(e.key === 'Enter') showSearch();
                         }}/>
-                        <button onClick={showSearch}><span className='hidden'>Search</span></button>
+                        <button onClick={showSearch}>
+                        <FontAwesomeIcon icon={faSearch} />
+                            <span className='hidden'>Search</span>
+                        </button>
                     </div>
                 </div>
                 

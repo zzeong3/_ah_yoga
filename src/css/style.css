@@ -1343,7 +1343,7 @@ footer .inner .line_etc.line3 {
   position: relative;
   width: 190px;
   height: 36px;
-  padding-right: 20px;
+  padding-right: 30px;
   border-bottom: 1px solid #000;
 }
 .Gallery .info .controls .searchBox input {
@@ -1351,7 +1351,7 @@ footer .inner .line_etc.line3 {
   height: 100%;
   background: transparent;
   border: 0;
-  padding: 6px 8px;
+  padding: 6px 0 6px 8px;
   font-size: 20px;
   font-family: "Quicksand", sans-serif;
 }
@@ -1360,12 +1360,12 @@ footer .inner .line_etc.line3 {
 }
 .Gallery .info .controls .searchBox button {
   position: absolute;
-  right: 0;
-  top: 7px;
-  width: 20px;
-  height: 20px;
+  right: 7px;
+  top: 8px;
   border: 0;
-  background: #555;
+  background: transparent;
+  font-size: 18px;
+  color: rgba(16, 16, 16, 0.8);
 }
 .Gallery .info .frame {
   transform: translateY(200px);
