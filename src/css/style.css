@@ -921,7 +921,7 @@ footer .inner .line_etc.line3 {
 }
 #story .info_story {
   display: flex;
-  padding: 80px 0 0;
+  padding: 80px 0 40px;
   align-items: center;
 }
 #story .info_story .community {
