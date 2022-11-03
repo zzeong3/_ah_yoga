@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/_ah_yoga/static/css/main.6d437bd8.css",
-    "main.js": "/_ah_yoga/static/js/main.e701c264.js",
+    "main.css": "/_ah_yoga/static/css/main.2816cc11.css",
+    "main.js": "/_ah_yoga/static/js/main.39359d64.js",
     "static/media/img1.png": "/_ah_yoga/static/media/img1.3646a8cf173c574511ce.png",
     "static/media/img15.png": "/_ah_yoga/static/media/img15.4a61e27c82d501a945e2.png",
     "static/media/img14.png": "/_ah_yoga/static/media/img14.45535512f6b6e2f6b2f4.png",
     "static/media/img2.png": "/_ah_yoga/static/media/img2.038f22c72e2931c31885.png",
-    "static/media/lecture_numbs.svg": "/_ah_yoga/static/media/lecture_numbs.ea4b6da5aa6f5f844e38.svg",
     "index.html": "/_ah_yoga/index.html",
+    "static/media/lecture_numbs.svg": "/_ah_yoga/static/media/lecture_numbs.ea4b6da5aa6f5f844e38.svg",
     "static/media/ico_copyright.svg": "/_ah_yoga/static/media/ico_copyright.b07e94ac0b17e10f4ee3.svg",
     "static/media/ico_star_white.svg": "/_ah_yoga/static/media/ico_star_white.76d4021cdcf9c526db17.svg",
     "static/media/ico_star.svg": "/_ah_yoga/static/media/ico_star.de5f178e8dd768e2e331.svg",
     "static/media/lecture_triangle.svg": "/_ah_yoga/static/media/lecture_triangle.bbf83cb93c039be6b3ac.svg",
-    "main.6d437bd8.css.map": "/_ah_yoga/static/css/main.6d437bd8.css.map",
-    "main.e701c264.js.map": "/_ah_yoga/static/js/main.e701c264.js.map"
+    "main.2816cc11.css.map": "/_ah_yoga/static/css/main.2816cc11.css.map",
+    "main.39359d64.js.map": "/_ah_yoga/static/js/main.39359d64.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d437bd8.css",
-    "static/js/main.e701c264.js"
+    "static/css/main.2816cc11.css",
+    "static/js/main.39359d64.js"
   ]
 }

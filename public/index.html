@@ -100,17 +100,14 @@
     const defaults = document.querySelector('.defaults');
     const mask = document.querySelector('.mask');
     let tags = ' ';
-    const baseURL = 'https://zzeong3.github.io/react_basic/img/';
+    const baseURL = 'https://zzeong3.github.io/_ah_yoga/img/';
     const imgs = [
-      baseURL + 'Community.jpg',
-      baseURL + 'Department.jpg',
-      baseURL + 'Gallery.jpg',
-      baseURL + 'Youtube.jpg',
-      baseURL + 'Location.jpg',
-      baseURL + 'Member.jpg',
-    ];
-    const vids = [
-      baseURL + 'vid1.mp4'
+      baseURL + 'img1.png',
+      baseURL + 'img2.png',
+      baseURL + 'img5.png',
+      baseURL + 'img15.png',
+      baseURL + 'img14.png',
+      baseURL + 'img16.png',
     ];
 
     createDOM();
@@ -120,7 +117,6 @@
 
     function createDOM() {
       imgs.forEach(src => tags+= `<img src=${src} />`);
-      vids.forEach(src => tags+= `<video src=${src}></video>`);
       defaults.innerHTML = tags;
     }
 
@@ -134,35 +130,20 @@
         imgDOM.forEach(img => {
           img.onload = () => {
             countImg++;
-            console.log('img loaded', countImg );
             if (countImg === imgs.length) res(true);
           }
         })
       })
     }
 
-    // 영상소스 로딩 완료 체크 함수
-    function loadVid() {
-      return new Promise((res, rej) => {
-        let countVid = 0;
-        const vidDOM = defaults.querySelectorAll('video');
-
-        vidDOM.forEach(vid => {
-          vid.onloadeddata = () => {
-            countVid++;
-            console.log('vid loaded', countVid );
-            if (countVid === vids.length) res(true);
-          }
-        })
-      })
-    }
+    
     
     // 캐싱완료후 더미 요소 제거함수
     async function endLoading () {
-      const result = await Promise.all([loadImg(), loadVid()])
-      const [loadedImg, loadedVid] = result;
+      const result = await Promise.all([loadImg()])
+      const [loadedImg] = result;
 
-      if(loadedImg && loadedVid) mask.classList.add('off');
+      if(loadedImg) mask.classList.add('off');
     
       setTimeout(() => {
         mask.remove();
