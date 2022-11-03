@@ -106,7 +106,7 @@ export default function Location() {
             </p>
 
             <div className="info">
-                <div id={"map"} ref= {container}></div>
+                <div id="map" ref= {container}></div>
                 
                 <div className="btnSet">
                     <button onClick={()=>{ setTraffic(!Traffic) }}>
