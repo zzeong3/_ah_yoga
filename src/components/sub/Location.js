@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Layout from '../common/Layout';
 
 export default function Location() {
-    const {kakao} = window;
+    const { kakao } = window;
 
     const info = [
         {

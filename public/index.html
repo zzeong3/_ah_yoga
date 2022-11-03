@@ -13,7 +13,11 @@
   <div id="root"></div>
 
   <div class="defaults"></div>
-  <div class="mask">LOADING...</div>
+  <div class="mask">
+    <div class="loading"><div class="inner_loading">
+      <div></div><div><div></div></div>
+      </div></div>
+  </div>
   
   <style>
     .defaults {
@@ -26,9 +30,70 @@
       display:flex;justify-content:center;align-items:center;
       font:20px/1 'arial';color:#fff;
     }
+
+      .inner_loading div { box-sizing: border-box!important }
+      .inner_loading > div {
+        position: absolute;
+        width: 108px;
+        height: 108px;
+        top: 21px;
+        left: 21px;
+        border-radius: 50%;
+        border: 12px solid #000;
+        border-color: #fbbc42 transparent #fbbc42 transparent;
+        animation: inner_loading 1s linear infinite;
+      }
+      .inner_loading > div:nth-child(2) { border-color: transparent }
+      .inner_loading > div:nth-child(2) div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+      .inner_loading > div:nth-child(2) div:before, .inner_loading > div:nth-child(2) div:after { 
+        content: "";
+        display: block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: -12px;
+        left: 36px;
+        background: #fbbc42;
+        border-radius: 50%;
+        box-shadow: 0 96px 0 0 #fbbc42;
+      }
+      .inner_loading > div:nth-child(2) div:after { 
+        left: -12px;
+        top: 36px;
+        box-shadow: 96px 0 0 0 #fbbc42;
+      }
+      .loading {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        overflow: hidden;
+        background: rgba(NaN, NaN, NaN, 0);
+      }
+      .inner_loading {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0; /* see note above */
+      }
+      .inner_loading div { box-sizing: content-box; }
+
+      @keyframes inner_loading {
+        0% { transform: rotate(0) }
+        100% { transform: rotate(360deg) }
+      }
+
     .mask.off {
       opacity:0;
     }
+
+
   </style>
 
   <script>

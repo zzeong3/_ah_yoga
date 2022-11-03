@@ -90,7 +90,7 @@ export default function Gallery(){
 
             <div className='info'>
                 {Loading && (
-                    <img src={`${process.env.PUBLIC_URL}/img/loading.gif`} className="loading" alt=""/>
+                    <img src={`${process.env.PUBLIC_URL}/img/loading.svg`} className="loading" alt=""/>
                 )}
                 <div className="controls">
                     <nav>
