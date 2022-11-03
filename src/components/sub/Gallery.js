@@ -23,13 +23,13 @@ export default function Gallery(){
         const result = input.current.value.trim();
         input.current.value = '';
 
-        if (!result) return alert('검색어를 입력하세요');
-
         if (!EnableClick) return;
         setEnableClick(false);
         setLoading(true);
         frame.current.classList.remove('on');
         setOpt({ type: 'search', tags: result, });
+
+        if (!result) return alert('검색어를 입력하세요');
     };
 
     const showInterest = () => {
