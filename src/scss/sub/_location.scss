@@ -1,37 +1,122 @@
 .Location {
-    #map {
-        width:100%;height:500px;background:#000;
-    }
-    .btnSet {
+    .area_map {
         display:flex;
-        flex-wrap: wrap;
-        align-content:flex-start;
         justify-content:space-between;
-        margin-top:50px;
-
-        button {
-            cursor:pointer;
-            height:30px;
-            border:1px solid #888;
-            padding:5px 20px;
-        }
-        ul {
-            display:flex;
-            li {
-                border:1px solid #888;
-                height:30px;
-                padding:0 20px;
-                line-height:30px;
-                font-size:12px;
-                cursor:pointer;
-                margin-left:10px;
-                transition:.5s;
-                &.on {
-                    background:#333;
-                    border:1px solid #333;
-                    color:#fff;
+        position:relative;
+        margin-bottom:70px;
+        
+        .area_txt {
+            width:40%;
+            margin-right:30px;
+            .tit {
+                display:block;
+                font-family:$fontM;
+                font-size:40px;line-height:42px;
+                .txt {
+                    display:block;
+                    margin-bottom:8px;
+                    font-weight:600;
+                    font-size:18px;line-height:22px;
+                    color:#999;
+                    font-family:$fontQ;
                 }
             }
+            .desc1{
+                font-family:$fontM;
+                margin-top:3px;
+                font-weight:500;
+                font-size:13px;
+                color:$pointColor;
+            }
+            .desc2 {
+                margin-top:15px;
+                padding-bottom:50px;
+                border-bottom:1px solid #000;
+                line-height:22px;
+            }
         }
+        #map {
+            width:100%;height:400px;background:#000;
+        }
+        .btn_traffic {
+            position:absolute;right:-25px;bottom:2px;z-index:10;
+            transform:scale(.8);
+            background:#000;color:#e1d4d5
+        }
+    }
+
+    .set_contact {
+        display:flex;
+        justify-content:space-between;
+        border-top:2px solid #000;
+        padding-top:40px;
+        gap:70px;
+        .cont {
+            position:relative;
+            width:100%;
+            height:300px;
+            border-bottom:1px solid #000;
+            .tit {
+                display:block;
+                font-family:$fontM;
+                font-size:22px;line-height:20px;
+            }
+            .btn {
+                margin-top:20px;
+                min-width:auto;
+                height:30px;
+                font-size:15px;
+                line-height:30px;
+            }
+            .tit_cont {
+                display:block;
+                margin-top:20px;
+                font-weight:600;
+                font-style:normal;
+                font-size:20px;
+                line-height:24px;
+            }
+            .desc_cont {
+                font-style:normal;
+                margin-top:20px;
+                font-size:15px;
+                line-height:22px;
+            }
+            .list_location {
+                margin-top:20px;
+                font-weight:600;
+                font-size:14px;
+                line-height:20px;
+                dt {
+                    float:left;
+                    margin-right:10px;
+                }
+                dd {
+                    overflow:hidden;
+                    a {
+                        color:$pointColor;
+                    }
+   
+                }
+            }
+            .area_sns {
+                position:absolute;
+                bottom:10px;
+                a {
+                    margin-right:10px;
+                    font-size:30px;
+                    color:$pointColor;
+                }
+            }
+            &:nth-of-type(1) {
+                .tit {
+                    font-size:28px; 
+                }
+                .desc_cont {
+                    margin-top:10px;
+                } 
+            }
+        }
+
     }
 }

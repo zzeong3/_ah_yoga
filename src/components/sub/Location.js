@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import Layout from '../common/Layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareFacebook, faSquareInstagram } from '@fortawesome/free-brands-svg-icons' 
 
 export default function Location() {
     const { kakao } = window;
 
     const info = [
         {
-            title : "본점",
+            title : "DIRECT CONTACT",
             latlng : new kakao.maps.LatLng(37.507025, 126.756348),
             imgUrl : `${process.env.PUBLIC_URL}/img/marker1.png`,
             imgSize : new kakao.maps.Size(232, 99),
@@ -30,6 +32,7 @@ export default function Location() {
 
     const container = useRef(null);
     const btns = useRef(null);
+    const btn = useRef(null);
     const [Location, SetLocation] = useState(null);
     const [Traffic, setTraffic] = useState(false);
     const [Info] = useState(info); 
@@ -75,8 +78,8 @@ export default function Location() {
 
 
         // 본점,지점1/2 on클래스 토글
-        for (const btn of btns.current.children) btn.classList.remove('on');
-        btns.current.children[Index].classList.add('on');
+        // for (const btn of btns.current.children) btn.classList.remove('on');
+        // btns.current.children[Index].classList.add('on');
 
         window.addEventListener('resize', ()=>{
             map_instance.setCenter(Info[Index].latlng);
@@ -106,24 +109,52 @@ export default function Location() {
             </p>
 
             <div className="info">
-                <div id="map" ref= {container}></div>
-                
-                <div className="btnSet">
-                    <button onClick={()=>{ setTraffic(!Traffic) }}>
+                <div className='area_map'>
+                    <div className='area_txt'>
+                        <strong className='tit'>
+                            <span className='txt'>CONTAC</span>
+                            <span>GET IN TOUCH</span>
+                        </strong>
+                        <p className='desc1'>In truth, yoga doesn't "take time" - it gives time.</p>
+                        <p className='desc2'>
+                            Yoga takes us to the present moment,<br />
+                            the only place where life exists.
+                        </p>
+                    </div>
+                    <div id="map" ref= {container}></div>
+                    <button className='btn btn_traffic' onClick={()=>{ setTraffic(!Traffic) }} >
                         {Traffic ? 'Traffiic OFF' : 'Traffiic ON'}
                     </button>
-                    <ul className="branch" ref={btns}>
-                        {
-                            Info.map((el, idx)=>{
-
-                                return(
-                                    <li key={idx} onClick={()=>{setIndex(idx)}}>
-                                        {el.title}
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
+                    
+                </div>
+                <div className="set_contact">
+                    <div className='cont'>
+                        <strong className='tit'>DIRECT CONTACT</strong>
+                        <button className='btn' onClick={()=>{setIndex(0)}}><span className='txt'>VIEW</span></button>
+                        <em className='tit_cont'>address</em>
+                        <address className='desc_cont'>#603-417, 47 Sejong-daero 23-gil, Jongno-gu, Seoul,<br />Republic of Korea (Postal Code: 03182)</address>
+                        <dl className='list_location'>
+                            <dt>tel</dt><dd><a href="tel:+380962722100" className="location_link">UA: +38 096 272 2100</a></dd>
+                            <dt>mail</dt><dd><a href="mailto:mail@halo-lab.com" className="location_link">mail@halo-lab.com</a></dd>
+                        </dl>
+                        <div className='area_sns'>
+                            <a href="#"><FontAwesomeIcon icon={faSquareFacebook} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faSquareInstagram} /></a>
+                        </div>
+                    </div>
+                    <div className='cont'>
+                        <strong className='tit'>MEDIA CONTACT</strong>
+                        <button className='btn'  onClick={()=>{setIndex(1)}}><span className='txt'>VIEW</span></button>
+                        <em className='tit_cont'>production request</em>
+                        <p className='desc_cont'>We are delighted to partner with the leading nonprofit system of substance use disorder treatment, mental health care, recovery resources, and related prevention and education services.</p>
+                    </div>
+                    <div className='cont'>
+                        <strong className='tit'>BETTER TOGETHER</strong>
+                        <button className='btn'  onClick={()=>{setIndex(2)}}><span className='txt'>VIEW</span></button>
+                        <em className='tit_cont'>jobs</em>
+                        <p className='desc_cont'>Pathlight is making a $15,000 donation in support of SHE RECOVERS Foundation’s mission in 2021. SHE RECOVERS Foundation is grateful to Pathlight for their outstanding commitment to mental health.</p>
+                    </div>
+            
                 </div>
             </div>
         </Layout>

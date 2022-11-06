@@ -54,7 +54,7 @@ footer {
                         color:#101010;
                         background:url(../../../public/img/ico_star.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
                         transition-duration: .1s;
-                        &:hover,&.on {
+                        &:hover,&.active {
                             background-position: 0 50%;
                             background-size: 12px;
                         }

@@ -15,7 +15,7 @@ a {
 }
 
 body {
-  background-image: radial-gradient(circle farthest-corner at 0 45%, #cdc4cd, #faf5f0), radial-gradient(circle farthest-corner at 0 55%, #cdc4cd, #faf5f0);
+  background-image: radial-gradient(circle farthest-corner at 0 65%, #cdc4cd, #faf5f0), radial-gradient(circle farthest-corner at 0 55%, #cdc4cd, #faf5f0);
   font-family: "Quicksand", sans-serif;
   color: #101010;
 }
@@ -37,6 +37,7 @@ fieldset {
 input::placeholder,
 textarea::placeholder {
   font-size: 16px;
+  line-height: 20px;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -131,7 +132,7 @@ header .inner #gnb li a {
   background-size: 0;
   transition-duration: 0.1s;
 }
-header .inner #gnb li a:hover, header .inner #gnb li a.on {
+header .inner #gnb li a:hover, header .inner #gnb li a.active {
   background-position: 0 50%;
   background-size: 12px;
 }
@@ -153,7 +154,7 @@ header .inner .until a {
   background-size: 0;
   transition-duration: 0.1s;
 }
-header .inner .until a:hover, header .inner .until a.on {
+header .inner .until a:hover, header .inner .until a.active {
   background-position: 0 50%;
   background-size: 12px;
 }
@@ -162,7 +163,7 @@ header .inner .until a.connect {
   line-height: 18px;
   background: none;
 }
-header .inner .until a.connect:hover, header .inner .until a.connect.on {
+header .inner .until a.connect:hover, header .inner .until a.connect.active {
   color: orange;
 }
 header .inner .lines {
@@ -273,7 +274,7 @@ footer .inner .area_footer .footer_gnb li a {
   background-size: 0;
   transition-duration: 0.1s;
 }
-footer .inner .area_footer .footer_gnb li a:hover, footer .inner .area_footer .footer_gnb li a.on {
+footer .inner .area_footer .footer_gnb li a:hover, footer .inner .area_footer .footer_gnb li a.active {
   background-position: 0 50%;
   background-size: 12px;
 }
@@ -1447,64 +1448,161 @@ footer .inner .line_etc.line3 {
     width: 50%;
   }
 }
-.Location #map {
+.Location .area_map {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 70px;
+}
+.Location .area_map .area_txt {
+  width: 40%;
+  margin-right: 30px;
+}
+.Location .area_map .area_txt .tit {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+}
+.Location .area_map .area_txt .tit .txt {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #999;
+  font-family: "Quicksand", sans-serif;
+}
+.Location .area_map .area_txt .desc1 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 3px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #e6904e;
+}
+.Location .area_map .area_txt .desc2 {
+  margin-top: 15px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #000;
+  line-height: 22px;
+}
+.Location .area_map #map {
   width: 100%;
-  height: 500px;
+  height: 400px;
   background: #000;
 }
-.Location .btnSet {
+.Location .area_map .btn_traffic {
+  position: absolute;
+  right: -25px;
+  bottom: 2px;
+  z-index: 10;
+  transform: scale(0.8);
+  background: #000;
+  color: #e1d4d5;
+}
+.Location .set_contact {
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
   justify-content: space-between;
-  margin-top: 50px;
+  border-top: 2px solid #000;
+  padding-top: 40px;
+  gap: 70px;
 }
-.Location .btnSet button {
-  cursor: pointer;
+.Location .set_contact .cont {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #000;
+}
+.Location .set_contact .cont .tit {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  line-height: 20px;
+}
+.Location .set_contact .cont .btn {
+  margin-top: 20px;
+  min-width: auto;
   height: 30px;
-  border: 1px solid #888;
-  padding: 5px 20px;
-}
-.Location .btnSet ul {
-  display: flex;
-}
-.Location .btnSet ul li {
-  border: 1px solid #888;
-  height: 30px;
-  padding: 0 20px;
+  font-size: 15px;
   line-height: 30px;
-  font-size: 12px;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: 0.5s;
 }
-.Location .btnSet ul li.on {
-  background: #333;
-  border: 1px solid #333;
-  color: #fff;
+.Location .set_contact .cont .tit_cont {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+.Location .set_contact .cont .desc_cont {
+  font-style: normal;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.Location .set_contact .cont .list_location {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.Location .set_contact .cont .list_location dt {
+  float: left;
+  margin-right: 10px;
+}
+.Location .set_contact .cont .list_location dd {
+  overflow: hidden;
+}
+.Location .set_contact .cont .list_location dd a {
+  color: #e6904e;
+}
+.Location .set_contact .cont .area_sns {
+  position: absolute;
+  bottom: 10px;
+}
+.Location .set_contact .cont .area_sns a {
+  margin-right: 10px;
+  font-size: 30px;
+  color: #e6904e;
+}
+.Location .set_contact .cont:nth-of-type(1) .tit {
+  font-size: 28px;
+}
+.Location .set_contact .cont:nth-of-type(1) .desc_cont {
+  margin-top: 10px;
 }
 
+.Member > .inner {
+  position: relative;
+  padding-left: 450px;
+}
+.Member > .inner h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.Member > .inner .desc_sub {
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+.Member > .inner .info {
+  border-top: 0;
+}
 .Member > .inner table {
   width: 100%;
   border: 0;
-  border-top: 2px solid #333;
-  border-bottom: 1px solid #333;
 }
 .Member > .inner table th {
   width: 20%;
   border: 0;
-  border-bottom: 1px solid #bbb;
-  padding: 15px 30px;
   text-align: left;
+  padding-bottom: 20px;
 }
 .Member > .inner table th:last-child {
   text-align: center;
 }
-.Member > .inner table th input[type=reset],
-.Member > .inner table th input[type=submit] {
-  border: 1px solid #aaa;
-  width: 150px;
-  height: 30px;
+.Member > .inner table th .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1513,31 +1611,46 @@ footer .inner .line_etc.line3 {
 }
 .Member > .inner table td {
   border: 0;
-  border: 1px solid #bbb;
-  border-left: 1px solid #bbb;
-  padding: 15px 30px;
+  padding-bottom: 20px;
+}
+.Member > .inner table td input[type=text]::placeholder {
+  font-size: 16px;
 }
 .Member > .inner table td input[type=text],
-.Member > .inner table td input[type=password],
-.Member > .inner table td select,
-.Member > .inner table td textarea {
-  width: 40%;
-  border: 1px solid #aaa;
+.Member > .inner table td input[type=password] {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+.Member > .inner table td select {
+  width: 100%;
   padding: 6px 10px;
+  border: 0;
+  border-bottom: 1px solid #000;
+  background: transparent;
+}
+.Member > .inner table td textarea {
+  width: 100%;
+  border: 1px solid #000;
+  background: #f3e9e4;
   resize: none;
 }
 .Member > .inner table td label {
-  margin-right: 6px;
+  margin-right: 20px;
 }
 .Member > .inner table td input[type=radio],
 .Member > .inner table td input[type=checkbox] {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .Member > .inner table td .err {
   display: block;
-  font: 12px/1 "arial";
-  color: hotpink;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
   margin-top: 10px;
+  color: #e6904e;
 }
 
 @media screen and (max-width: 1179px) {

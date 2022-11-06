@@ -9,24 +9,24 @@ export default function Header(props) {
         <header>
             <div className="inner">
                 <h1>
-                    <Link to='/' activeClassName="on"><img src={process.env.PUBLIC_URL + '/img/logo_main.png'} alt="a yoga" /></Link>   
+                    <NavLink to='/'><img src={process.env.PUBLIC_URL + '/img/logo_main.png'} alt="a yoga" /></NavLink>   
                 </h1>
                 <nav>
                     <ul id="gnb">
                         <li>
-                            <NavLink to='/department' activeClassName="on">Department</NavLink>  
+                            <NavLink to='/department'>Department</NavLink>  
                         </li>
                         <li>
-                            <NavLink to='/community' activeClassName="on">Community</NavLink>
+                            <NavLink to='/community'>Community</NavLink>
                         </li>
-                        <li><NavLink to='/gallery' activeClassName="on">Gallery</NavLink></li>
-                        <li><NavLink to='/youtube' activeClassName="on">Youtube</NavLink></li>
-                        <li><NavLink to='/location' activeClassName="on">Location</NavLink></li>       
+                        <li><NavLink to='/gallery'>Gallery</NavLink></li>
+                        <li><NavLink to='/youtube'>Youtube</NavLink></li>
+                        <li><NavLink to='/location'>Location</NavLink></li>       
                     </ul>
                 </nav>
                 <div className="until">
-                    <NavLink to='/Member' activeClassName="on">Member</NavLink>
-                    <NavLink to='/location' activeClassName="on" className="connect">CONNECT<br/>WITH US</NavLink>
+                    <NavLink to='/Member'>Member</NavLink>
+                    <NavLink to='/location' className="connect">CONNECT<br/>WITH US</NavLink>
                 </div>
                 <div className="lines">
                     <div className="lines_line line1"></div>

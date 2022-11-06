@@ -24,7 +24,7 @@ header {
                     font-weight:500;font-size:16px;line-height:22px;color:#101010;
                     background:url(../../../public/img/ico_star.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
                     transition-duration: .1s;
-                    &:hover,&.on {
+                    &:hover,&.active {
                         background-position: 0 50%;
                         background-size: 12px;
                     }
@@ -37,13 +37,13 @@ header {
                 display:block;padding-left:18px;font-weight:500;font-size:16px;line-height:22px;color:#101010;
                 background:url(../../../public/img/ico_star.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
                 transition-duration: .1s;
-                &:hover,&.on {
+                &:hover,&.active {
                     background-position: 0 50%;
                     background-size: 12px;
                 }
                 &.connect {
                     font-weight:700;line-height:18px;background:none;
-                    &:hover,&.on {
+                    &:hover,&.active {
                         color:orange
                     }
                 }

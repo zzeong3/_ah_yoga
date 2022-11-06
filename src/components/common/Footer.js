@@ -24,15 +24,15 @@ export default function Footer() {
                     <div className="area_footer">
                         <ul className="footer_gnb">
                             <li>
-                                <NavLink to='/department' activeClassName="on">Department</NavLink>  
+                                <NavLink to='/department'>Department</NavLink>  
                             </li>
                             <li>
-                                <NavLink to='/community' activeClassName="on">Community</NavLink>
+                                <NavLink to='/community'>Community</NavLink>
                             </li>
-                            <li><NavLink to='/gallery' activeClassName="on">Gallery</NavLink></li>
-                            <li><NavLink to='/youtube' activeClassName="on">Youtube</NavLink></li>
-                            <li><NavLink to='/location' activeClassName="on">Location</NavLink></li>    
-                            <li><NavLink to='/member' activeClassName="on">Member</NavLink></li>   
+                            <li><NavLink to='/gallery'>Gallery</NavLink></li>
+                            <li><NavLink to='/youtube'>Youtube</NavLink></li>
+                            <li><NavLink to='/location'>Location</NavLink></li>    
+                            <li><NavLink to='/member'>Member</NavLink></li>   
                         </ul>
                         <div className="area_link">
                             <a href="tel:+380962722100" className="footer_link">UA: +38 096 272 2100</a>
