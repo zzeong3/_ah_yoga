@@ -10,7 +10,9 @@ export default function Member() {
         email : '',
         pwd1 : '',
         pwd2 : '',
-        birth : '',
+        birthYear : '',
+        birthMonth : '',
+        birthDay : '',
         comments : '',
         gender : null,
         interests : null,
@@ -61,8 +63,16 @@ export default function Member() {
             errs.comments = 'Please enter at least 20 characters to leave a message.';
         }
 
-        if (Val.birth === ' ') {
-            errs.birth = 'Please enter your date of birth.'
+        if (Val.birthYear.length < 4) {
+            errs.birthYear = 'Please enter the correct 4-digit year of birth.'
+        } 
+
+        if (Val.birthMonth === '') {
+            errs.birthMonth = 'Please select the month of birth.'
+        }
+
+        if (Val.birthDay.length < 2) {
+            errs.birthDay = 'Please enter the correct two-digit date of birth (date).'
         }
         
         return errs;
@@ -178,12 +188,13 @@ export default function Member() {
                                 {/* birth */}
                                 <tr>
                                     <th scope='row'>
-                                        <label htmlFor="birth">Birth</label>
+                                        <label htmlFor="birthYear">Birth</label>
                                     </th>
                                     <td>
-                                        <input type="text" id='num1' name='birth' placeholder='생년월일(4자)' value={Val.birth} onChange={handleChange}/>
+                                        <input type="text" id='birthYear' name='birthYear' placeholder='생년월일(4자)' value={Val.birthYear} onChange={handleChange}/>
+                                        <span className='err'>{Err.birthYear}</span>
 
-                                        <select name="birth" id="birth" onChange={handleSelect}>
+                                        <select name="birthMonth" id="birthMonth" onChange={handleSelect}>
                                             <option value="">Month</option>
                                             <option value="jan">1</option>
                                             <option value="feb">2</option>
@@ -198,7 +209,10 @@ export default function Member() {
                                             <option value="nov">11</option>
                                             <option value="dec">12</option>
                                         </select>
-                                        <span className='err'>{Err.birth}</span>
+                                        <span className='err'>{Err.birthMonth}</span>
+
+                                        <input type="text" id='birthDay' name='birthDay' placeholder='일(2자)' value={Val.birthDay} onChange={handleChange}/>
+                                        <span className='err'>{Err.birthDay}</span>
                                     </td>
                                 </tr>
 
