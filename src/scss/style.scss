@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 $tablet : 1179px;
-$mobile : 539px;
+$mobile : 480px;
 $txtColor : #101010;
 $txtColor2 : rgba(16,16,16,.8);
 $pointColor : #e6904e;
@@ -16,6 +16,7 @@ $fontM : 'Montserrat', sans-serif;
 @import 'common/footer';
 @import 'common/layout';
 @import 'common/popup';
+@import 'common/menu';
 
 //main
 @import 'main/visual';

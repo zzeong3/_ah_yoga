@@ -1,15 +1,18 @@
 import React from "react";
-import { NavLink, Link} from "react-router-dom";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
-// import { faBars } from '@fortawesome/free-solid-svg-icons' 
+import { NavLink} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {useRef} from 'react';
+import Menu from "./Menu";
 
 export default function Header(props) {
+    const menu = useRef(null);
 
     return(
         <header>
             <div className="inner">
                 <h1>
-                    <NavLink to='/'><img src={process.env.PUBLIC_URL + '/img/logo_main.png'} alt="a yoga" /></NavLink>   
+                    <NavLink to='/'>A-YOGA</NavLink>   
                 </h1>
                 <nav>
                     <ul id="gnb">
@@ -34,8 +37,9 @@ export default function Header(props) {
                     <div className="lines_line line3"></div>
                 </div>
 
-                {/* <FontAwesomeIcon icon={faBars} /> */}
+                <FontAwesomeIcon icon={faBars} onClick={() => menu.current.toggle()} />
             </div>
+            <Menu ref={menu} />
         </header>
     )
 }

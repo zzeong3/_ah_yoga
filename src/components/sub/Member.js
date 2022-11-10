@@ -186,14 +186,17 @@ export default function Member() {
                                 </tr>
                                 
                                 {/* birth */}
-                                <tr>
+                                <tr className='birth'>
                                     <th scope='row'>
                                         <label htmlFor="birthYear">Birth</label>
                                     </th>
                                     <td>
-                                        <input type="text" id='birthYear' name='birthYear' placeholder='생년월일(4자)' value={Val.birthYear} onChange={handleChange}/>
-                                        <span className='err'>{Err.birthYear}</span>
+                                        <div className='cont'>
+                                            <input type="text" id='birthYear' name='birthYear' placeholder='Year (4characters)' value={Val.birthYear} onChange={handleChange}/>
+                                            <span className='err'>{Err.birthYear}</span>
+                                        </div>
 
+                                        <div className='cont'>
                                         <select name="birthMonth" id="birthMonth" onChange={handleSelect}>
                                             <option value="">Month</option>
                                             <option value="jan">1</option>
@@ -210,9 +213,12 @@ export default function Member() {
                                             <option value="dec">12</option>
                                         </select>
                                         <span className='err'>{Err.birthMonth}</span>
+                                        </div>
 
-                                        <input type="text" id='birthDay' name='birthDay' placeholder='일(2자)' value={Val.birthDay} onChange={handleChange}/>
+                                        <div className='cont'>
+                                        <input type="text" id='birthDay' name='birthDay' placeholder='Day (2characters)' value={Val.birthDay} onChange={handleChange}/>
                                         <span className='err'>{Err.birthDay}</span>
+                                        </div>
                                     </td>
                                 </tr>
 

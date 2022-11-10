@@ -10,10 +10,6 @@ export default function Department() {
                 we can free ourselves from 
                 fear, anguish, and loneliness.
             </p>
-            <div className="bg">
-                <div className="bg1"></div>
-                <div className="bg2"></div>
-            </div>
 
             <div className="info">
                 <article className="intro_department">        

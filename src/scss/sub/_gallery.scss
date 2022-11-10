@@ -127,17 +127,64 @@
 
 @media screen and (max-width:$tablet) {
     .Gallery {
-        .frame article {
-            width:33.3%;
+        .info {
+            .frame {
+                article {
+                    width:33.3%;
+                }
+            }
         }
+        
     }
-    
+}
+
+@media screen and (max-width:900px) {
+    .Gallery {
+        .info {
+            padding-left:0;
+            .controls {
+                position: static;
+                overflow:hidden;
+                nav {
+                    float:left;
+                    overflow:hidden;
+                    margin-top:5px;
+                    button {
+                        float:left;
+                        margin-right:20px;
+                    }
+                }
+                .searchBox {
+                    float:right;
+                }
+            }
+            .frame {
+                article {
+                    width:50%;
+                }
+            }
+        }
+        
+    }
 }
 
 @media screen and (max-width:$mobile) {
     .Gallery {
-        .frame article {
-            width:50%;
+        .info {
+            .controls {
+                .searchBox {
+                    float:right;
+                    width:100%;
+                }
+            }
+            .frame {
+                margin-top:20px;
+                article {
+                    width:100%;
+                    padding:20px 0 0;
+                }
+            }
         }
+        
     }
 }

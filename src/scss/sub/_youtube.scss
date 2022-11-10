@@ -2,6 +2,7 @@
     .info {
         padding-top:0;
         border-top:0;
+        border-bottom:1px solid #000;
         article {
             position:relative;
             border-top:1px solid #000;
@@ -42,18 +43,6 @@
             &:hover {
                 background:#f3e9e4;
             }
-            &::before {
-                content:"";
-                position:absolute;
-                left:20%;
-                top:-20px;
-                width: 40px;
-                height: 40px;
-                background-image: url(../../../public/img/ico_star.svg);
-                background-position: 50% 50%;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
         }
     }
     
@@ -62,34 +51,31 @@
 
 @media screen and (max-width:$tablet) {
     .Youtube {
-        article {
-            h3 {
-                width:48%;
-            }
-            .txt {
-                width:50%;
-            }
-            .pic {
-                width:100%;margin-top:50px;margin-bottom:80px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:$mobile) {
-    .Youtube {
-        article {
-            width:100%;margin-bottom:20px;
-            .txt {
-                width:100%;
-            }
-            .txt {
-                width:100%;
-            }
-            .pic {
-                height:120px;
-                margin-bottom:0;
+        .info {
+            article {
+                padding:20px 10px;
+                display:block;
+                h3 {
+                    width:100%;
+                    font-size:20px;
+                }
+                .txt {
+                    display:block;
+                    width:100%;padding:15px 0 0;
+                    p {
+                        font-size:16px;line-height:22px;
+                    }
+                    span {
+                        display:block;
+                        margin-top:5px;
+                        font-size:14px;
+                    }
+                }
+                .pic {
+                    width:100%;height:200px;margin-top:20px;
+                }
+                
             }
         }
-    }
+    }     
 }

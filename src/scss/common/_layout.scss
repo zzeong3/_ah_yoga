@@ -45,3 +45,40 @@
         border-top:1px solid #000;
     }
 }
+
+
+@media screen and (max-width:$tablet) {
+    .content {
+        > .inner {
+            width:100%;
+            padding:0 25px;
+            margin-top:150px;
+            h2 {
+                font-size:60px;
+            }
+            
+        }
+        .info {
+            padding-top:60px;
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .content {
+        > .inner {
+            h2 {
+                font-size:50px;
+            }
+            .desc_sub {
+                font-size:18px;
+                line-height:26px;
+                padding:0 0 50px 15px;
+                &::after {
+                    top:-3px;
+                    transform:scale(.7);
+                }
+             }
+        }
+    }
+}

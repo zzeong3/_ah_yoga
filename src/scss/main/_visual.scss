@@ -108,3 +108,88 @@
     }
     
 }
+
+@media screen and (max-width:$tablet) {
+    #visual {
+        width:100%;
+        padding:100px 25px 0;
+        .inner {
+            .tit {
+                margin:0 0 56px 0;
+                transform:scale(.8);
+                transform-origin:left top;
+            }
+            .left {
+                right:2%;
+                max-width:200px;
+            }
+            .right {
+                right:265px;
+            }
+            .area_lecture {
+                transform:scale(.9);
+                transform-origin:left top;
+                left:0;bottom:22%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    #visual {
+        .inner {
+            padding:50px 0;
+            .tit {
+                transform:scale(.7);
+                transform-origin:left top;
+            }
+            .left{
+                top:55%;
+                max-width:170px;
+                max-height:470px;
+            }
+            .right {
+                top:55%;
+                right:220px;
+                max-width:80px;
+                max-height:420px;
+            }
+            .area_lecture {
+                left:0;bottom:10%;
+            }            
+        }
+    }
+}
+
+@media screen and (max-width:676px) {
+    #visual {
+        .inner {
+            .tit {
+                transform:scale(.5);
+            }
+            .area_lecture {
+                transform:scale(.7);
+                transform-origin:left top;
+                left:0;bottom:0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    #visual {
+        .inner {
+            .tit {
+                transform:scale(.4);
+                .txt4 {
+                    left:0;
+                }
+            }
+            .left {
+                .ico {
+                    transform:scale(0.7);
+                }
+            }
+        }
+    }
+}

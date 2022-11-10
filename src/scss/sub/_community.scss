@@ -1,7 +1,6 @@
 .Community {
     > .inner {
         .inputBox {
-            
             width:50%;
             strong {
                 display:block;font-size:30px;line-height:25px;
@@ -100,34 +99,46 @@
     }
 }
 
+
 @media screen and (max-width:$tablet) {
+
     .Community {
         > .inner {
             .inputBox {
-                input[type='text'],
-                textarea {
-                    width:100%;
-                }
-                .btnSet {
-                    display:flex;
-                    flex-wrap:wrap;
-                    justify-content:space-between;
-                    button {
-                        width:47%;
-                        margin-right:0;
-                    }
-                }
+                width:100%;
             }
             .showBox {
                 article {
-                    .editTxt,
-                    .txt {
-                        width:100%;
+                    padding:40px;
+                    em {
+                        display:none;
                     }
-                    .btnSet {
-                        margin-top:20px;
-                        .btn {
-                            min-width:none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+
+    .Community {
+        > .inner {
+            .inputBox {
+                strong {
+                    font-size:25px;
+                }
+                
+            }
+            .showBox {
+                margin-top:80px;
+                article {
+                    padding:30px 20px;
+                    &::before {
+                        transform:scale(.7);
+                    }
+                    .txt {
+                        strong {
+                            font-size:22px;line-height:28px;
                         }
                     }
                 }

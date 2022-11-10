@@ -127,3 +127,52 @@
     }
     
 }
+
+
+@media screen and (max-width:$tablet) {
+    #story {
+        width:100%;
+        min-height:auto;
+        .tit {
+            transform:scale(.8);
+        }
+        .info_story {
+            display:block;
+            padding:0 25px 40px;
+            .community {
+                padding-top:60px;
+                width:100%;
+            }
+        }
+        .line3 {
+            display:none;
+        }
+    }
+    
+}
+
+@media screen and (max-width:$mobile) {
+    #story {
+        .tit {
+            transform:scale(.6);
+        }
+        .info_story {
+            .pics {
+                .list_pics {
+                    margin-top:-50px;
+                    li {
+                        width:40%;
+                        &:nth-of-type(2n) {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+        .lines {
+            transform:scale(.7);
+        }
+
+    }
+    
+}

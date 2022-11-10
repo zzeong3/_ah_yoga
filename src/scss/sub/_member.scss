@@ -10,117 +10,143 @@
         }
         .info {
             border-top:0;
+            padding-top:240px;
+            strong {
+                display:block;
+                margin-bottom:30px;
+                font-size:60px;font-family:$fontM;
+            }
+
+            table {
+                width:100%;border:0;
+    
+                th {
+                    width:190px;border:0;text-align:left;
+                    padding:20px 0;
+                    vertical-align:top;
+                    font-size:20px;
+                    font-weight:500;
+                    &:last-child {
+                        text-align:center; 
+                    }
+                    .btn {
+                        display:inline-flex;
+                        justify-content:center;
+                        align-items:center;
+                        margin:0 10px;
+                        cursor: pointer;
+                    }
+                }
+                td {
+                    border:0;
+                    padding:20px 0;
+                    input[type='text']::placeholder {
+                        font-size:16px;
+                    }
+                    input[type='text'],
+                    input[type='password'] {
+                        width:100%;
+                        height:50px;
+                        padding: 15px;
+                        background: transparent;
+                        border:0;
+                        border-bottom:1px solid #000;
+                        font-family:$fontQ;
+                        font-size:16px;
+                    }
+                    select {
+                        width:100%;height:50px;padding:6px 10px;
+                        border:0;
+                        border-bottom:1px solid #000;
+                        background:transparent;
+                        font-family:$fontQ;
+                        font-size:16px;
+                    }
+                    textarea {
+                        width:100%;
+                        height:150px;
+                        border:1px solid #000;
+                        background:#f3e9e4;
+                        resize:none;
+                        padding:10px 15px;
+                    }
+                    label {
+                        margin-right:20px;
+                    }
+                    input[type='radio'],
+                    input[type='checkbox']{
+                        width:18px;
+                        height:18px;
+                        margin-right:10px;
+                        vertical-align:top;
+                        margin-top:1px;
+                    }
+                    .err {
+                        display:block;
+                        font-family:$fontQ;
+                        font-size:15px;
+                        margin-top:10px;
+                        color:$pointColor
+                    }
+                }
+                .birth {
+                    td {
+                        display:flex;
+                        vertical-align:top;
+                        justify-content:space-between;
+                        gap: 20px;
+                        .cont {
+                            width:33.3%;
+                            
+                        }
+    
+                    }
+                }
+            }
         }
        
-        table {
-            width:100%;border:0;
-
-            th {
-                width:20%;border:0;text-align:left;
-                padding-bottom:20px;
-                &:last-child {
-                    text-align:center; 
-                }
-                .btn {
-                    display:inline-flex;
-                    justify-content:center;
-                    align-items:center;
-                    margin:0 10px;
-                    cursor: pointer;
-                }
-            }
-            td {
-                border:0;
-                padding-bottom:20px;
-                input[type='text']::placeholder {
-                    font-size:16px;
-                }
-                input[type='text'],
-                input[type='password'] {
-                    width:100%;
-                    height:50px;
-                    padding: 15px;
-                    background: transparent;
-                    border:0;
-                    border-bottom:1px solid #000;
-                }
-                select {
-                    width:100%;padding:6px 10px;
-                    border:0;
-                    border-bottom:1px solid #000;
-                    background:transparent;    
-                }
-                textarea {
-                    width:100%;
-                    border:1px solid #000;
-                    background:#f3e9e4;
-                    resize:none;
-                }
-                label {
-                    margin-right:20px;
-                }
-                input[type='radio'],
-                input[type='checkbox']{
-                    margin-right:10px;
-                }
-                .err {
-                    display:block;
-                    font-family:$fontQ;
-                    font-size:15px;
-                    margin-top:10px;
-                    color:$pointColor
-                }
-            }
-        }
+        
     }
 }
 
 @media screen and (max-width:$tablet) {
     .Member {
-        > .inner {
-            table {
-                td {
-                    input[type='text'],
-                    input[type='password'],
-                    select,
-                    textarea {
-                        width:80%;
-                    }
+        .inner {
+            padding:0 25px;
+            h2 {
+                position:static;
+            }
+            .desc_sub {
+                position:relative;
+                top:0;
+            }
+            .info {
+                padding-top:0;
+                strong {
+                    font-size:50px;
+                    text-align: right;
                 }
-            }  
-        }
-    }
-}
-
-@media screen and (max-width:$mobile) {
-    .Member {
-        > .inner {
-            table {
-                th {
-                    display:none;
-                    padding:15px 0;
-                    &:last-child {
+                table {
+                    table-layout:fixed;
+                    th {
+                        width:150px;
+                        font-size:18px;
                         display:block;
-                        width:100%;
+                        &:last-child {
+                            display:flex;
+                        }
                     }
-                    ipnut[type='reset'],
-                    inpunt[type='submit'] {
-                        width:48%;margin:0;
-                    }
-                }
-                td {
-                    border-left:0;
-                    border-right:0;
-                    padding:15px 0;
-
-                    input[type='text'],
-                    input[type='password'],
-                    select,
-                    textarea {
-                        width:100%;
+                    td {
+                        display:block;
+                        padding:0;
                     }
                 }
             }
         }
     }
+
+}
+
+@media screen and (max-width:$mobile) {
+ 
 }

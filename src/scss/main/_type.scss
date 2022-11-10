@@ -48,3 +48,52 @@
         
     }
 }
+
+@media screen and (max-width:$tablet) {
+    #type {
+        width:100%;
+        height:auto;
+        min-height:auto;
+        padding:44px 0 84px;
+        .box_big {
+            height:500px;
+            .box_smail {
+                bottom:0;
+                width:270px;
+                height:428px;
+                padding:24px;
+                .thumb_small {
+                    width:220px;
+                    height:164px;
+                }
+                .tit {
+                    margin-top:30px;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width:$mobile) {
+    #type {
+        .box_big {
+            .box_smail {
+                right:auto;
+                left:50%;
+                transform:translate(-50%, 0);
+            }
+        }
+        .paging {
+            justify-content:center;
+            flex-wrap:wrap;
+            .btn {
+                width:40%;
+                min-width:auto;
+                margin:10px 10px 0;
+            }
+        }
+    }
+}
+

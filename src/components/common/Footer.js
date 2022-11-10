@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="footer_cont">
                     <div className="area_footer">
                         <Link to='' className="footer_logo">
-                            AH-yoga
+                            AH-YOGA
                         </Link>
                         
                         <Link to='' className="link_copyright">

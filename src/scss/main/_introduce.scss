@@ -1,5 +1,6 @@
 #introduce {
     position:relative;
+    overflow:hidden;
     width:1180px;margin:0 auto;
     display:flex;
     justify-content:space-between;
@@ -73,6 +74,39 @@
                 right:auto;
                 width:755px;
             }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet) {
+    #introduce {
+        width:100%;
+        padding:65px 25px 44px;
+        display:block;
+        .cont {
+            width:100%;
+            margin-top:30px;
+            font-size:18px;
+            .txt {
+                text-align:left;
+            }
+        }
+        .lines {
+            left:30%;
+            .lines_line {
+                &.line1 {
+                    display:none;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:$mobile) {
+    #introduce {
+        .lines {
+            transform:scale(0.7);
         }
     }
 }
