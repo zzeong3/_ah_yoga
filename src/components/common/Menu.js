@@ -25,8 +25,8 @@ const Menu = forwardRef ((props, ref) => {
         {Open && (
             <motion.nav id='mobileMenu'
             initial={{opacity:0}}
-            animate={{opacity:1,  transition:{duration:.5}}}
-            exit={{opacity:1, transition:{duration:.5}}}
+            animate={{opacity:1,  transition:{duration:.3}}}
+            exit={{opacity:0, transition:{duration:.3}}}
             onClick={()=>setOpen(false)}
             >
                 <h1>
