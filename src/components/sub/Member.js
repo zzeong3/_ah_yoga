@@ -135,7 +135,7 @@ export default function Member() {
             </p>
 
             <div className="info">
-                <strong>Say Hello</strong>
+                <strong>Say Hello !</strong>
                 <form onSubmit={handleSubmit}>
                     <fieldset>
                         <legend className='hidden'>회원가입 폼 양식</legend>
@@ -192,7 +192,7 @@ export default function Member() {
                                     </th>
                                     <td>
                                         <div className='cont'>
-                                            <input type="text" id='birthYear' name='birthYear' placeholder='Year (4characters)' value={Val.birthYear} onChange={handleChange}/>
+                                            <input type="text" id='birthYear' name='birthYear' placeholder='Year(4ch)' value={Val.birthYear} onChange={handleChange}/>
                                             <span className='err'>{Err.birthYear}</span>
                                         </div>
 
@@ -216,7 +216,7 @@ export default function Member() {
                                         </div>
 
                                         <div className='cont'>
-                                        <input type="text" id='birthDay' name='birthDay' placeholder='Day (2characters)' value={Val.birthDay} onChange={handleChange}/>
+                                        <input type="text" id='birthDay' name='birthDay' placeholder='Day (2ch)' value={Val.birthDay} onChange={handleChange}/>
                                         <span className='err'>{Err.birthDay}</span>
                                         </div>
                                     </td>

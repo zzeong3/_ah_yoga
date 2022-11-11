@@ -8,11 +8,9 @@
     transition: .2s;
 
     h1 {
-        top:20px;
-        left:50px;
         width:100%;
         margin-bottom:30px;
-        margin-top: 1px;
+        margin-top:2px;
         font-size:29px;
         a {
             font-family:$fontM;
@@ -37,7 +35,7 @@
     .fa-xmark {
         position:fixed;
         right:26px;
-        top:34px;
+        top:32px;
         font-size:36px;
         cursor:pointer;
     }
