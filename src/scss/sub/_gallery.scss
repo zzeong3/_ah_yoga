@@ -34,9 +34,9 @@
                     position:absolute;left:18px;right:0;bottom:0;
                     height:1px;background:#000;width:0;transition:.2s;
                 }
-                &:hover {
+                &:hover, &.on {
                     &::after {
-                        width:84%
+                        width:84%;  
                     }
                 }
             }

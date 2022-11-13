@@ -17,44 +17,54 @@ export default function Gallery(){
     const [Index, setIndex] = useState(0); 
     const frame = useRef(null);
     const input = useRef(null);
+    const btnInterest = useRef(null);
+    const btnMine = useRef(null);
     const pop = useRef(null);
 
 
     const showSearch = () => {
         const result = input.current.value.trim();
         input.current.value = '';
+        btnMine.current.classList.remove('on');
+        btnInterest.current.classList.remove('on');
 
         if (!EnableClick) return;
+        if (!result) return alert('검색어를 입력하세요');
         setEnableClick(false);
         setLoading(true);
         frame.current.classList.remove('on');
         setOpt({ type: 'search', tags: result, });
 
-        if (!result) return alert('검색어를 입력하세요');
+       
     };
 
     const showInterest = () => {
         if(!EnableClick) return;
-
         setEnableClick(false);
 
         setLoading(true);
+        btnMine.current.classList.remove('on');
+        btnInterest.current.classList.add('on');
         frame.current.classList.remove('on');
         setOpt({type: 'interest'});
+  
     }
 
     const showMine = () => {
         if(!EnableClick) return;
-
         setEnableClick(false);
 
         setLoading(true);
-        frame.current.classList.remove('on');
+        btnMine.current.classList.add('on');
+        btnInterest.current.classList.remove('on');
         setOpt({type : 'user', user: '188875987@N03'});
+
     }
 
     const showUser = (e) => {
         if(!EnableClick) return;
+        btnMine.current.classList.remove('on');
+        btnInterest.current.classList.remove('on');
         setEnableClick(false);
         setLoading(true);
         frame.current.classList.remove('on');
@@ -95,8 +105,8 @@ export default function Gallery(){
                 )}
                 <div className="controls">
                     <nav>
-                        <button onClick={showInterest}>POPULAR</button>
-                        <button onClick={showMine}>AH-YOGA</button>
+                        <button type='button' onClick={showMine} ref={btnMine}>AH-YOGA</button> 
+                        <button type='button' onClick={showInterest} ref={btnInterest}>POPULAR</button>
                     </nav>
                     <div className="searchBox">
                         <input type="text" ref={input} placeholder="Search" 

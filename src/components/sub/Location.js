@@ -31,13 +31,10 @@ export default function Location() {
     ]
 
     const container = useRef(null);
-    const btns = useRef(null);
-    const btn = useRef(null);
     const [Location, SetLocation] = useState(null);
     const [Traffic, setTraffic] = useState(false);
     const [Info] = useState(info); 
     const [Index, setIndex] = useState(0);
-
 
     const option = { 
         center: Info[Index].latlng, 
@@ -130,7 +127,7 @@ export default function Location() {
                 <div className="set_contact">
                     <div className='cont'>
                         <strong className='tit'>DIRECT CONTACT</strong>
-                        <button className='btn' onClick={()=>{setIndex(0)}}><span className='txt'>VIEW</span></button>
+                        <button className={Index===0 ? "btn on" : "btn"} onClick={()=>{setIndex(0)}}><span className='txt'>VIEW</span></button>
                         <em className='tit_cont'>address</em>
                         <address className='desc_cont'>#603-417, 47 Sejong-daero 23-gil, Jongno-gu, Seoul,<br />Republic of Korea (Postal Code: 03182)</address>
                         <dl className='list_location'>
@@ -144,13 +141,13 @@ export default function Location() {
                     </div>
                     <div className='cont'>
                         <strong className='tit'>MEDIA CONTACT</strong>
-                        <button className='btn'  onClick={()=>{setIndex(1)}}><span className='txt'>VIEW</span></button>
+                        <button className={Index===1 ? "btn on" : "btn"}   onClick={()=>{setIndex(1)}}><span className='txt'>VIEW</span></button>
                         <em className='tit_cont'>production request</em>
                         <p className='desc_cont'>We are delighted to partner with the leading nonprofit system of substance use disorder treatment, mental health care, recovery resources, and related prevention and education services.</p>
                     </div>
                     <div className='cont'>
                         <strong className='tit'>BETTER TOGETHER</strong>
-                        <button className='btn'  onClick={()=>{setIndex(2)}}><span className='txt'>VIEW</span></button>
+                        <button className={Index===2 ? "btn on" : "btn"}   onClick={()=>{setIndex(2)}}><span className='txt'>VIEW</span></button>
                         <em className='tit_cont'>jobs</em>
                         <p className='desc_cont'>Pathlight is making a $15,000 donation in support of SHE RECOVERS Foundation’s mission in 2021. SHE RECOVERS Foundation is grateful to Pathlight for their outstanding commitment to mental health.</p>
                     </div>

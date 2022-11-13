@@ -4,9 +4,15 @@
     padding:64px 0;
     min-height:856px;
     height:95vh;
-    .box_big {
+    .wrap_box {
         position:relative;
         height:650px;
+    }
+    .box_big {
+        position:absolute;
+        display:none;
+        width:100%;
+        height:100%;
         img {
             width:100%;height:100%;object-fit:cover;
         }
@@ -40,6 +46,9 @@
                 color:$txtColor2;
             }
         }
+        &.on{
+            display:block;
+        }
     }
 
     .paging {
@@ -70,6 +79,9 @@
                     margin-top:30px;
                 }
             }
+        }
+        .paging {
+            padding:0 20px;
         }
 
     }
