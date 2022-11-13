@@ -7,11 +7,11 @@ export default function Footer() {
             <div className="inner">
                 <div className="footer_cont">
                     <div className="area_footer">
-                        <Link to='' className="footer_logo">
+                        <a href='#' className="footer_logo">
                             AH-YOGA
-                        </Link>
+                        </a>
                         
-                        <Link to='' className="link_copyright">
+                        <a href='#' className="link_copyright">
                             <span className="thumb_logo">
                                 <img src={process.env.PUBLIC_URL + '/img/logo_main.png'} alt="a yoga" />
                             </span>
@@ -19,7 +19,7 @@ export default function Footer() {
                             <p className="txt">
                                 2022 a-yoga<br />All rights reserved.
                             </p>
-                        </Link>
+                        </a>
                     </div>
                     <div className="area_footer">
                         <ul className="footer_gnb">
@@ -43,36 +43,36 @@ export default function Footer() {
                         <strong className="tit_footer_sns">MORE LINK</strong>
                         <ul className="list_sns">
                             <li>
-                                <Link to=''>
+                                <a href='https://ms-my.facebook.com/studiogomin/posts/5011198698962527/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + '/img/ico_sns1.svg'} alt="" />
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to=''>
+                                <a href='https://shop.29cm.co.kr/brand/11412' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + '/img/ico_sns2.svg'} alt="" />
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to=''>
+                                <a href='http://ahyoga.co.kr/category/magazine/43/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + '/img/ico_sns3.svg'} alt="" />
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to=''>
+                                <a href='https://www.instagram.com/ah__yoga/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + '/img/ico_sns4.svg'} alt="" />
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to=''>
+                                <a href='http://ahyoga.co.kr/category/shop/42/' target='_blank'>
                                     <img src={process.env.PUBLIC_URL + '/img/ico_sns5.svg'} alt="" />
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                         <div className="area_stroe">
                             <strong>stroe.</strong>
-                            <Link to=''>
+                            <a href="https://smartstore.naver.com/ahyoga/" target='_blank'>
                                 https://smartstore.naver.com/ahyoga/
-                            </Link>
+                            </a>
                         </div>
 
                     </div>
