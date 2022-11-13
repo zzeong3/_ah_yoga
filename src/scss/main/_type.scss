@@ -7,50 +7,51 @@
     .wrap_box {
         position:relative;
         height:650px;
-    }
-    .box_big {
-        position:absolute;
-        display:none;
-        width:100%;
-        height:100%;
-        img {
-            width:100%;height:100%;object-fit:cover;
-        }
-        .box_smail {
+        .box_big {
             position:absolute;
-            right:70px;bottom:-60px;
-            width:334px;height:476px;
-            padding:40px 38px;
-            border:1px solid #000;
-            background:#f3e9e4;
-            .thumb_small {
-                position:relative;
-                width:256px;height:164px;
-                overflow:hidden;
-                img {
-                    position:absolute;left:0;bottom:-30px;
-                    width:100%;height:auto;object-fit:cover;
+            display:none;
+            width:100%;
+            height:100%;
+            img {
+                width:100%;height:100%;object-fit:cover;
+            }
+            .box_smail {
+                position:absolute;
+                right:70px;bottom:-60px;
+                width:334px;height:476px;
+                padding:40px 38px;
+                border:1px solid #000;
+                background:#f3e9e4;
+                .thumb_small {
+                    position:relative;
+                    width:256px;height:164px;
+                    overflow:hidden;
+                    img {
+                        position:absolute;left:0;bottom:-30px;
+                        width:100%;height:auto;object-fit:cover;
+                    }
+                }
+                .tit {
+                    display:block;
+                    margin-top:40px;
+                    font-size:22px;line-height:24px;
+                    text-transform:uppercase;
+                }
+                .desc {
+                    margin-top:16px;
+                    font-family:$fontQ;
+                    font-size:16px;
+                    line-height:24px;
+                    color:$txtColor2;
                 }
             }
-            .tit {
+            &.on{
                 display:block;
-                margin-top:40px;
-                font-size:22px;line-height:24px;
-                text-transform:uppercase;
-            }
-            .desc {
-                margin-top:16px;
-                font-family:$fontQ;
-                font-size:16px;
-                line-height:24px;
-                color:$txtColor2;
             }
         }
-        &.on{
-            display:block;
-        }
+    
     }
-
+    
     .paging {
         display:flex;
         margin-top:27px;
@@ -64,21 +65,24 @@
         height:auto;
         min-height:auto;
         padding:44px 0 84px;
-        .box_big {
+        .wrap_box {
             height:500px;
-            .box_smail {
-                bottom:0;
-                width:270px;
-                height:428px;
-                padding:24px;
-                .thumb_small {
-                    width:220px;
-                    height:164px;
-                }
-                .tit {
-                    margin-top:30px;
+            .box_big {
+                .box_smail {
+                    bottom:0;
+                    width:270px;
+                    height:428px;
+                    padding:24px;
+                    .thumb_small {
+                        width:220px;
+                        height:164px;
+                    }
+                    .tit {
+                        margin-top:30px;
+                    }
                 }
             }
+            
         }
         .paging {
             padding:0 20px;
@@ -90,12 +94,14 @@
 
 @media screen and (max-width:$mobile) {
     #type {
-        .box_big {
-            .box_smail {
-                right:auto;
-                left:50%;
-                transform:translate(-50%, 0);
-            }
+        .wrap_box {
+            .box_big {
+                .box_smail {
+                    right:auto;
+                    left:50%;
+                    transform:translate(-50%, 0);
+                }
+            } 
         }
         .paging {
             justify-content:center;

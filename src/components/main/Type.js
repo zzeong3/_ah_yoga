@@ -54,7 +54,7 @@ const tabClickHandler=(index)=>{
                         </div>
                         <strong className='tit'>bikram</strong>
                         <p className='desc'>
-                            Chicago-based Designers was the lead designer of the building, led by Will Radford and Matt Trott. They wanted a creative office that utilize the space and needed minimal
+                            Chicago-based Designers was the lead designer of the building, led by Will Radford and Matt Trott. They wanted a creative office that utilize the space and needed
                         </p>
                     </div>
                 </div>
