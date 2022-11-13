@@ -1,4 +1,5 @@
 #type {
+    opacity:0;
     position:relative;
     width:1180px;margin:0 auto;
     padding:64px 0;
@@ -12,8 +13,16 @@
             display:none;
             width:100%;
             height:100%;
-            img {
-                width:100%;height:100%;object-fit:cover;
+            .thumb_big {
+                overflow: hidden;
+                width:100%;height:100%;
+                .thumb {
+                    width:100%;height:100%;
+                    img {
+                        width:100%;height:100%;object-fit:cover;
+                    }
+                }
+                
             }
             .box_smail {
                 position:absolute;
@@ -55,9 +64,58 @@
     .paging {
         display:flex;
         margin-top:27px;
-        
+    }
+
+    &.on{
+        opacity:1;
+        .thumb_big {
+            transition:.2s;
+            animation-name:thumb_big;
+            animation-duration:.8s;
+        }
+        .box_smail {
+            animation-name:box_smail;
+            animation-duration:1s;
+        }
+        .paging {
+            animation-name:paging;
+            animation-duration:1.5s;
+        }
     }
 }
+
+@keyframes thumb_big {
+    0% {
+      height:0;
+    }
+    100% {
+        height:100%;
+    }
+}
+
+@keyframes box_smail {
+    0% {
+        opacity:0;
+        margin-bottom:-50px;
+    }
+    100% {
+        opacity:1;
+        tmargin-bottom:0;
+    }
+}
+
+@keyframes paging {
+    0% {
+        opacity:0;
+        transform:translateX(-200px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
 
 @media screen and (max-width:$tablet) {
     #type {

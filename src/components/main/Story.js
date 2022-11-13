@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Popup from '../common/Popup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons' 
 
 export default function Story() {
 
@@ -77,6 +79,7 @@ export default function Story() {
                                     setIndex(idx);
                                 }}>
                                     <img src={`https://live.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}_m.jpg`} alt="" />
+                                    <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
                                 </li>
                             )
                         })}

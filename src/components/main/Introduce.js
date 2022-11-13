@@ -11,10 +11,12 @@ export default function Introduce() {
                 <span className="job">Chief Architect</span>
             </div>
         </div>
-        <p className="cont">
-            <span className="txt">Spaces Institute for Architec-ture and Design was</span>
-            founded in 2009 by the philanthropist Darrell Steward, with mission to change physical, cultural landscapes of German cities. The Institute promotes positive changes and creates new trends
-        </p>
+        <div className="wrap_cont">
+            <p className="cont">
+                <span className="txt">Spaces Institute for Architec-ture and Design was</span>
+                founded in 2009 by the philanthropist Darrell Steward, with mission to change physical, cultural landscapes of German cities. The Institute promotes positive changes and creates new trends
+            </p>
+        </div>
         <div className="lines">
             <div className="lines_line line1"></div>
             <div className="lines_line line2"></div>

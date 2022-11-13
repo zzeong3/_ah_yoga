@@ -129,7 +129,9 @@
     .Location {
         .area_map {
             display:block;
+            margin:0 -25px 50px;
             .area_txt {
+                padding:0 25px;
                 width:100%;
                 .desc2 {
                     border-bottom:0;
@@ -148,6 +150,16 @@
                     position:static;
                     margin-top:15px;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .Location {
+        .area_map {
+            #map {
+                height:300px;
             }
         }
     }

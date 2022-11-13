@@ -32,7 +32,6 @@ export default function Main() {
         pos.current.map((pos, idx) => {
             if ( scroll  >= pos + base ) {
                 for(const btn of btns) btn.classList.remove('on');
-                for(const sec of secs) sec.classList.remove('on');
                 btns[idx].classList.add('on');
                 secs[idx].classList.add('on');
             }

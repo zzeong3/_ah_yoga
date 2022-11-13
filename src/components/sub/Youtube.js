@@ -5,6 +5,9 @@ import Layout from "../common/Layout";
 import { useState, useRef } from "react";
 import Popup from "../common/Popup";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons' 
+
 
 
 export default function Youtube() {
@@ -40,6 +43,7 @@ export default function Youtube() {
                                     setIndex(index);
                                 }}>
                                 <img src={data.snippet.thumbnails.standard.url} alt={data.snippet.title} />
+                                <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
                             </div>
                         </article>
                     );

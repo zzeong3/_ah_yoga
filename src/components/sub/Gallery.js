@@ -114,7 +114,7 @@ export default function Gallery(){
                             if(e.key === 'Enter') showSearch();
                         }}/>
                         <button onClick={showSearch}>
-                        <FontAwesomeIcon icon={faSearch} />
+                            <FontAwesomeIcon icon={faSearch} />
                             <span className='hidden'>Search</span>
                         </button>
                     </div>

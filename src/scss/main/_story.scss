@@ -1,4 +1,5 @@
 #story {
+    opacity:0;
     position:relative;width:1180px;margin:0 auto;
     z-index:1;
     overflow:hidden;
@@ -37,11 +38,12 @@
 
 
     .tit {
+        display:block;
         font-weight:700;
         font-size:120px;line-height:1;
         letter-spacing:-2px;
         text-align:right;
-        padding:70px 5px 40px 0
+        padding:70px 5px 40px 0;
     }
 
     
@@ -55,7 +57,6 @@
             article {
                 padding:20px;
                 transform:translateX(-100px) rotateY(180deg);
-                opacity:0;
                 transition:.5s;
             
                 @for $i from 1 through 5 {
@@ -86,30 +87,22 @@
                 gap:20px;
                 justify-content:center;
                 li {
+                    position:relative;
                     box-shadow:5px 10px 10px rgba(205, 196, 205);
                     overflow:hidden;
                     cursor: pointer;
                     transition:.3s;
+                    transform:translateX(-100px) rotateY(180deg);
+                    transition:.5s;
                     img {
                         width:100%;height:100%;object-fit:cover;
-                        
-                    }
-                    &:hover {
-                        transform: rotate(10deg);
-                    }
-                    &:nth-of-type(2),
-                    &:nth-of-type(5) {
-                        transform: rotate(10deg);
-                        &:hover {
-                            transform: rotate(0deg);
-                        }
-                    }
-                    &:nth-of-type(3),
-                    &:nth-of-type(7) {
-                        transform: rotate(-10deg);
-                        &:hover {
-                            transform: rotate(0deg);
-                        }
+                    }                   
+                    svg {
+                        position:absolute;
+                        right:8px;
+                        bottom:8px;
+                        color:#fefefe;
+                        font-size:15px;
                     }
                 }
             }
@@ -118,14 +111,67 @@
     }
 
     &.on {
+        opacity:1;
+        .lines {
+            animation-name:lines;
+            animation-duration:1s;
+        }
+        .line3 {
+            animation-name:line3;
+            animation-duration:1s;
+        }
+        .tit {
+            animation-name:tit;
+            animation-duration:1s;
+        }
         .community {
-            article {
-                opacity:1;transform:translateX(0) rotateY(0);
+            article, .list_pics li {
+                transform:translateX(0) rotateY(0);
             }
         }
-        
+        .info_story {
+            .pics {
+                .list_pics {
+                    li {
+                        transform:translateX(0) rotateY(0);
+                        &:hover {
+                            transform: translateY(-20px);
+                        }
+                    }
+                }      
+                
+            }
+        }     
     }
-    
+}
+
+@keyframes lines {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+@keyframes line3 {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+@keyframes tit {
+    0% {
+        opacity:0;
+        transform:translateX(100px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
 }
 
 
@@ -134,7 +180,8 @@
         width:100%;
         min-height:auto;
         .tit {
-            transform:scale(.8);
+            font-size:80px;
+            padding:70px 40px 40px 0;
         }
         .info_story {
             display:block;
@@ -142,6 +189,9 @@
             .community {
                 padding-top:60px;
                 width:100%;
+                article {
+                    padding:15px 0;
+                }
             }
         }
         .line3 {
@@ -154,7 +204,8 @@
 @media screen and (max-width:$mobile) {
     #story {
         .tit {
-            transform:scale(.6);
+            font-size:50px;
+            padding:70px 40px 90px 0;
         }
         .info_story {
             .pics {

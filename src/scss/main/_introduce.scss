@@ -7,6 +7,7 @@
     padding:85px 76px 64px;
     .area_thumb {
         display:flex;
+        opacity:0;
         .thumb {
             position:relative;
             overflow:hidden;
@@ -35,17 +36,21 @@
         }
 
     }
-    
-    .cont {
-        width:560px;font-family:$fontQ;
-        font-size:22px;line-height:30px;
-        color:$txtColor2;
-        .txt {
-            display:block;text-align:right;
+    .wrap_cont {
+        overflow:hidden;
+        .cont {
+            opacity:0;
+            width:560px;font-family:$fontQ;
+            font-size:22px;line-height:30px;
+            color:$txtColor2;
+            .txt {
+                display:block;text-align:right;
+            }
         }
-    }
-
+    }      
+    
     .lines {
+        opacity:0;
         position:absolute;
         top:0;
         left:405px;
@@ -74,6 +79,72 @@
                 right:auto;
                 width:755px;
             }
+        }
+    }
+
+    &.on {
+        .area_thumb {
+                opacity:1;
+            .thumb {
+                animation-name: thumb;
+                animation-duration:1s;
+            }
+            .info_thumb {
+                animation-name: info_thumb;
+                animation-duration:1s;
+            }
+        }
+        .cont {
+            opacity:1;
+            animation-name: cont;
+            animation-duration:.8s;
+        }
+
+        .lines {
+            opacity:1;
+            animation-name: lines;
+            animation-duration:1.5s;
+        }
+        
+    }
+    
+
+    @keyframes lines {
+        0% {
+          transform:scale(0);
+        }
+        100% {
+            transform:scale(1);
+        }
+    }
+
+    @keyframes thumb {
+        0% {
+            opacity:0;
+            transform:translateX(-50px);
+        }
+        100% {
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+    @keyframes info_thumb {
+        0% {
+            opacity:0;
+            transform:translateX(-100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    @keyframes cont {
+        0% {
+            transform:translateY(-100px);
+        }
+        100% {
+            transform:translateY(0);
         }
     }
 }

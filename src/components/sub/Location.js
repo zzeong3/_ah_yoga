@@ -9,24 +9,24 @@ export default function Location() {
     const info = [
         {
             title : "DIRECT CONTACT",
-            latlng : new kakao.maps.LatLng(37.507025, 126.756348),
-            imgUrl : `${process.env.PUBLIC_URL}/img/marker1.png`,
-            imgSize : new kakao.maps.Size(232, 99),
-            imgPos : {offset: new kakao.maps.Point(116, 69)}
+            latlng : new kakao.maps.LatLng(37.5125585, 127.1025353),
+            imgUrl : `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize : new kakao.maps.Size(64, 64),
+            imgPos : {offset: new kakao.maps.Point(35, 80)}
         },
         {
             title : "지점1",
             latlng : new kakao.maps.LatLng(37.5116828, 127.059151),
-            imgUrl : `${process.env.PUBLIC_URL}/img/marker2.png`,
-            imgSize : new kakao.maps.Size(232, 99),
-            imgPos : {offset: new kakao.maps.Point(116, 69)}
+            imgUrl : `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize : new kakao.maps.Size(64, 64),
+            imgPos : {offset: new kakao.maps.Point(35, 80)}
         },
         {
             title : "지점2",
             latlng : new kakao.maps.LatLng(37.5258975, 126.9284261),
-            imgUrl : `${process.env.PUBLIC_URL}/img/marker3.png`,
-            imgSize : new kakao.maps.Size(232, 99),
-            imgPos : {offset: new kakao.maps.Point(116, 69)}
+            imgUrl : `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize : new kakao.maps.Size(64, 64),
+            imgPos : {offset: new kakao.maps.Point(35, 80)}
         },
     ]
 

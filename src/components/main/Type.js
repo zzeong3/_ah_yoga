@@ -11,7 +11,9 @@ const tabClickHandler=(index)=>{
         <h2 className="hidden">yoga type</h2>
             <div className='wrap_box'>
                 <div className={activeIndex===0 ? "box_big type1 on" : "box_big type1"} >
-                    <img src={process.env.PUBLIC_URL+'/img/tab1.png'}/>
+                    <div className='thumb_big'>
+                        <div className='thumb'><img src={process.env.PUBLIC_URL+'/img/tab1.png'}/></div>
+                    </div>
                     <div className='box_smail'>
                         <div className='thumb_small'>
                             <img src={process.env.PUBLIC_URL+'/img/tab1.png'}/>
@@ -23,7 +25,9 @@ const tabClickHandler=(index)=>{
                     </div>
                 </div>
                 <div className={activeIndex===1 ? "box_big type2 on" : "box_big type2"} >
-                    <img src={process.env.PUBLIC_URL+'/img/tab2.png'}/>
+                    <div className='thumb_big'>
+                        <div className='thumb'><img src={process.env.PUBLIC_URL+'/img/tab2.png'}/></div>
+                    </div>
                     <div className='box_smail'>
                         <div className='thumb_small'>
                             <img src={process.env.PUBLIC_URL+'/img/tab2.png'}/>
@@ -35,7 +39,9 @@ const tabClickHandler=(index)=>{
                     </div>
                 </div>
                 <div className={activeIndex===2 ? "box_big type3 on" : "box_big type3"}>
-                    <img src={process.env.PUBLIC_URL+'/img/tab3.png'}/>
+                    <div className='thumb_big'>
+                        <div className='thumb'><img src={process.env.PUBLIC_URL+'/img/tab3.png'}/></div>
+                    </div>
                     <div className='box_smail'>
                         <div className='thumb_small'>
                             <img src={process.env.PUBLIC_URL+'/img/tab3.png'}/>
@@ -47,7 +53,9 @@ const tabClickHandler=(index)=>{
                     </div>
                 </div>
                 <div className={activeIndex===3 ? "box_big type4 on" : "box_big type4"}>
-                    <img src={process.env.PUBLIC_URL+'/img/img15.png'}/>
+                    <div className='thumb_big'>
+                        <div className='thumb'><img src={process.env.PUBLIC_URL+'/img/img15.png'}/></div>
+                    </div>
                     <div className='box_smail'>
                         <div className='thumb_small'>
                             <img src={process.env.PUBLIC_URL+'/img/img15.png'}/>

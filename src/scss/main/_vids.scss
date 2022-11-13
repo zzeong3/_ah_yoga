@@ -1,4 +1,5 @@
 #vids {
+    opacity:0;
     position:relative;
     width:1180px;margin:0 auto;
     overflow:hidden;
@@ -57,15 +58,18 @@
                 }
             }
         }
-        .desc {
-            width:350px;
-            font-size:22px;
-            line-height:34px;
-            font-family:$fontQ;
-            color:$txtColor2;
-            .txt {
-                display:block;
-                text-align:right;
+        .wrap_desc {
+            overflow:hidden;
+            .desc {
+                width:350px;
+                font-size:22px;
+                line-height:34px;
+                font-family:$fontQ;
+                color:$txtColor2;
+                .txt {
+                    display:block;
+                    text-align:right;
+                }
             }
         }
     }
@@ -81,6 +85,7 @@
             transition:.5s;
             
             .pic {
+                position:relative;
                 width:100%;
                 height:210px;
                 overflow:hidden;
@@ -90,6 +95,13 @@
 
                 img {
                     width:100%;height:100%;object-fit:cover;
+                }
+                svg {
+                    position:absolute;
+                    right:8px;
+                    bottom:8px;
+                    color:#fefefe;
+                    font-size:15px;
                 }
             }
             strong {
@@ -114,6 +126,82 @@
             }
         }
         
+    }
+    &.on {
+        opacity:1;
+        .lines {
+            animation-name:lines;
+            animation-duration:1.5s;
+        }
+        .info_tit {
+            .tit {
+                .txt1{
+                    animation-name:txt1;
+                    animation-duration:1s;
+                }
+                .txt2{
+                    animation-name:txt2;
+                    animation-duration:1s;
+                }
+            }
+        }
+        .desc {
+            animation-name:desc;
+            animation-duration:1s;
+        }
+        .pic {
+            animation-name:pic;
+            animation-duration:1s;
+        }
+    }
+
+    @keyframes lines {
+        0% {
+          transform:scale(0);
+        }
+        100% {
+            transform:scale(1);
+        }
+    }
+
+    @keyframes txt1 {
+        0% {
+            opacity:0;
+            transform:translateX(-100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
+
+    @keyframes txt2 {
+        0% {
+            opacity:0;
+            transform:translateX(100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
+
+    @keyframes desc {
+        0% {
+            transform:translateY(-100px);
+        }
+        100% {
+            transform:translateY(0);
+        }
+    }
+
+    @keyframes pic {
+        0% {
+            height:0;
+        }
+        100% {
+            height:210px;
+        }
     }
 }
 
@@ -155,7 +243,7 @@
                 transform:scale(.6);
                 transform-origin:left top;
             }
-            .desc {
+            .wrap_desc {
                 width:100%;
                 margin-top:-10%;
                 font-size:18px;
@@ -179,7 +267,7 @@
 @media screen and (max-width:$mobile) {
     #vids {
         .info_tit {
-            .desc {
+            .wrap_desc {
                 margin-top:-30%;          
             }
         }

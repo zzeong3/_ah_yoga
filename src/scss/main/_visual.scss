@@ -4,11 +4,12 @@
     overflow:hidden;
     min-height:856px;
     height:95vh;
-    padding:172px 0 0;
+    padding:152px 0 0;
     .inner {
         position:relative;
         height:100%;
-        padding:120px 0;
+        padding:140px 0 120px;
+        overflow:hidden;
         .tit {
             position:relative;
             z-index:1;
@@ -18,6 +19,8 @@
             letter-spacing:-2px;
             .txt1 {
                 display:inline-block;
+                animation-name: txt;
+                animation-duration:1.5s;
             }
             .txt2{
                 display:block;
@@ -25,16 +28,22 @@
                 left:132px;
                 font-weight:700;
                 text-transform: uppercase;
+                animation-name: txtBold;
+                animation-duration:1.5s;;
             }
             .txt3{
                 display:block;
                 text-transform: uppercase;
+                animation-name: txt;
+                animation-duration:1.5s;
             }
             .txt4{
                 display:block;
                 position:relative;
                 left:300px;
                 font-weight:600;
+                animation-name: txtBold;
+                animation-duration:1.5s;
                 &::before {
                     content:"";
                     display:inline-block;
@@ -55,6 +64,8 @@
             max-height: 632px;
             background:url(../../../public/img/img14.png) no-repeat 50% 0;background-size:cover;
             transform:translate(0, -50%);
+            animation-name: left;
+            animation-duration:1.5s;
             .ico {
                 position:absolute;top:145px;right:-40px;
                 width:80px;height:80px;
@@ -71,6 +82,8 @@
             max-height:520px;
             background:url(../../../public/img/img15.png) no-repeat 35% 0;background-size:cover;
             transform:translate(0, -50%);
+            animation-name:right;
+            animation-duration:1.5s;
         }
         .area_lecture {
             display:flex;
@@ -78,9 +91,12 @@
             position:absolute;left:76px;bottom:4%;
             .lecture_img {
                 position:relative;
+                z-index:5;
                 width:96px;
                 height:104px;
                 background:#000;
+                animation-name:lecture_img;
+                animation-duration:1.5s;
                 &::before {
                     content:"";
                     position:absolute;left:0;top:0;
@@ -97,6 +113,8 @@
             }
             .lecture_txt {
                 padding-left:40px;
+                animation-name:lecture_txt;
+                animation-duration:1s;
                 .tit_lecture {
                     display:block;margin-bottom:16px;color:$txtColor2;
                 }
@@ -106,13 +124,75 @@
             }
         }
     }
+ 
+    @keyframes txt {
+        0% {
+          opacity:0;
+          transform:translateX(100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
+
+
+    @keyframes txtBold {
+        0% {
+          opacity:0;
+          transform:translateX(-100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
+
+    @keyframes left {
+        0% {
+          transform:translateY(-1000px);
+        }
+        100% {
+            transform:translate(0, -50%);
+        }
+    }
+
+    @keyframes right {
+        0% {
+          transform:translateY(1000px);
+        }
+        100% {
+            transform:translate(0, -50%);
+        }
+    }
+
+    @keyframes lecture_img {
+        0% {
+            opacity:0;
+            transform:translateX(-50px);
+        }
+        100% {
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+    @keyframes lecture_txt {
+        0% {
+            opacity:0;
+            transform:translateX(-100px);
+        }
+        100% {
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
     
 }
 
 @media screen and (max-width:$tablet) {
     #visual {
         width:100%;
-        padding:100px 25px 0;
+        padding:97px 25px 0;
         .inner {
             .tit {
                 margin:0 0 56px 0;
@@ -138,7 +218,7 @@
 @media screen and (max-width:850px) {
     #visual {
         .inner {
-            padding:50px 0;
+            padding:53px 0;
             .tit {
                 transform:scale(.7);
                 transform-origin:left top;

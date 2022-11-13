@@ -9,6 +9,8 @@ header {
         }
         h1 {
             float:left;
+            animation-name: header;
+            animation-duration:1.5s;;
             a {
                 display:block;width:100%;height:100%;
                 font-size:29px;
@@ -18,6 +20,8 @@ header {
         }
         #gnb {
             float:left;padding-left:60px;column-count:2;column-gap:60px;
+            animation-name: header;
+            animation-duration:1.5s;
             li {
                 a {
                     display:block;padding-left:18px;margin-bottom:12px;
@@ -33,6 +37,8 @@ header {
         }
         .until {
             float:right;column-count:2;column-gap:60px;
+            animation-name: header;
+            animation-duration:1.5s;
             a {
                 display:block;padding-left:18px;font-weight:500;font-size:16px;line-height:22px;color:#101010;
                 background:url(../../../public/img/ico_star.svg);background-repeat:no-repeat;background-position:6px 50%;background-size:0;
@@ -84,9 +90,29 @@ header {
         .fa-bars {
             display:none;
         }
-    }    
-}
+    }
 
+    @keyframes header {
+        0% {
+          opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+}
+.home header .inner .lines  {
+    animation-name: lines;
+    animation-duration:2s;  
+}
+@keyframes lines {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
 
 @media screen and (max-width:$tablet) {
     header {
