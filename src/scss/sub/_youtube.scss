@@ -29,6 +29,7 @@
                 }
             }
             .pic {
+                position:relative;
                 width:40%;height:200px;background:#000;
                 filter: saturate(.5);
                 transition: .5s;
