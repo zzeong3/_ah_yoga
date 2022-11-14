@@ -200,11 +200,11 @@
                 transform-origin:left top;
             }
             .left {
-                right:2%;
+                right:5%;
                 max-width:200px;
             }
             .right {
-                right:265px;
+                right:280px;
             }
             .area_lecture {
                 transform:scale(.9);
@@ -224,13 +224,14 @@
                 transform-origin:left top;
             }
             .left{
+                right:8%;
                 top:55%;
                 max-width:170px;
                 max-height:470px;
             }
             .right {
                 top:55%;
-                right:220px;
+                right:260px;
                 max-width:80px;
                 max-height:420px;
             }
@@ -264,6 +265,9 @@
                 .txt4 {
                     left:0;
                 }
+            }
+            .right {      
+                right:230px;    
             }
             .left {
                 .ico {
