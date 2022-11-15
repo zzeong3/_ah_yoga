@@ -5,13 +5,17 @@
     min-height:856px;
 
     .scroll_txt {
-        font-size:400px;
+        font-size:450px;
         color:#999;
         opacity:.1;
         position:absolute;
-        top:-40px;
+        top:-95px;
         left:100px;
         text-shadow:5px 5px 5px rgba(0,0,0,.5);
+        .txt {
+            font-size:300px;
+            letter-spacing:-15px;
+        }
     }
 
     .lines {
@@ -128,6 +132,10 @@
             animation-name:line3;
             animation-duration:1s;
         }
+        .scroll_txt {
+            animation-name:scroll_txt;
+            animation-duration:1s;
+        }
         .tit {
             animation-name:tit;
             animation-duration:1s;
@@ -182,6 +190,17 @@
     }
 }
 
+@keyframes scroll_txt {
+    0% {
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    100% {
+        opacity:.1;
+        transform:translateX(0);
+    }
+}
+
 
 @media screen and (max-width:$tablet) {
     #story {
@@ -189,8 +208,11 @@
         min-height:auto;
         overflow:hidden;
         .scroll_txt {
-            font-size:300px;
-            top:-25px;
+            font-size:350px;
+            top:-75px;
+            .txt {
+                font-size:200px;
+            }
         }
         .tit {
             font-size:80px;

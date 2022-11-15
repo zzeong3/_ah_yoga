@@ -64,9 +64,9 @@ export default function Story({Scrolled, start}) {
         <section id="story" className='myScroll'>
             <strong className="scroll_txt"
                 style={{
-                    left:-1000 + position/2,
+                    left:-900 + position/2,
                 }}
-            >with&
+            ><span className="txt">with</span>&
             </strong>
 
             <div className="lines">
