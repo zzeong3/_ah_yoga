@@ -65,7 +65,7 @@ export default function Main() {
             <Introduce />
             <Type />
             <Vids />
-            <Story />
+            <Story Scrolled={Scrolled} start={pos.current[2]}/>
             <Btns setIndex={setIndex} />
         </main>
     )

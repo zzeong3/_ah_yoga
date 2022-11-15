@@ -4,7 +4,8 @@ import Popup from '../common/Popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons' 
 
-export default function Story() {
+export default function Story({Scrolled, start}) {
+    const position = Scrolled - start || 0;
 
     // community
     const getLocalData = () => {   
@@ -51,6 +52,7 @@ export default function Story() {
     }, []);
 
     // pics
+    
     const Pics = useSelector(store => store.flickrReducer.flickr)
     const pop = useRef(null);
     const [Index, setIndex] = useState(0);
@@ -60,6 +62,13 @@ export default function Story() {
         <>
 
         <section id="story" className='myScroll'>
+            <strong className="scroll_txt"
+                style={{
+                    left:-1000 + position/2,
+                }}
+            >with&
+            </strong>
+
             <div className="lines">
                 <div className="lines_line line1"></div>
                 <div className="lines_line line2"></div>
@@ -68,7 +77,7 @@ export default function Story() {
             <div className="line3"></div>
 
             <div className="info_story">
-            <div className="pics">
+                <div className="pics">
                     <h3 className="hidden">PHOTO</h3>
                     <ul className="list_pics">
                         {Pics.map((pic, idx)=>{
@@ -98,8 +107,6 @@ export default function Story() {
                         )
                     })} 
                 </div>
-
-
             </div>
         </section>
         

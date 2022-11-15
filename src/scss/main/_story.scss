@@ -2,9 +2,17 @@
     opacity:0;
     position:relative;width:1180px;margin:0 auto;
     z-index:1;
-    overflow:hidden;
     min-height:856px;
-    
+
+    .scroll_txt {
+        font-size:400px;
+        color:#999;
+        opacity:.1;
+        position:absolute;
+        top:-40px;
+        left:100px;
+        text-shadow:5px 5px 5px rgba(0,0,0,.5);
+    }
 
     .lines {
         position:absolute;
@@ -19,7 +27,7 @@
             height:1px;
             background-color:#101010;
             &.line1 {
-                width:936px;
+                width:340px;
             }
             &.line2 {
                 left:20px;
@@ -179,6 +187,11 @@
     #story {
         width:100%;
         min-height:auto;
+        overflow:hidden;
+        .scroll_txt {
+            font-size:300px;
+            top:-25px;
+        }
         .tit {
             font-size:80px;
             padding:70px 40px 40px 0;
@@ -206,6 +219,18 @@
         .tit {
             font-size:50px;
             padding:70px 40px 90px 0;
+        }
+        .scroll_txt {
+            font-size:240px;
+            top:-25px;
+        }
+        .lines {
+            .lines_line {
+                &.line1 {
+                    width:500px;
+                }
+            }
+            
         }
         .info_story {
             .pics {
